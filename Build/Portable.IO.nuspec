@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id></id>
+		<version>0.0.0</version>
+		<authors>Matthias Gernand</authors>
+		<owners>Matthias Gernand</owners>
+		<licenseUrl>http://www.fluxera.com/license</licenseUrl>
+		<projectUrl>http://www.fluxera.com/</projectUrl>
+		<!--<iconUrl></iconUrl>-->
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>[description]</description>
+		<summary></summary>
+		<language>en-US</language>
+		<tags></tags>
+		<dependencies>
+			<!-- Add nuget package dependencies -->
+		</dependencies>
+		<frameworkAssemblies>
+			<!-- Add framework assemblies -->
+			<frameworkAssembly assemblyName="System" targetFramework="net45" />
+			<frameworkAssembly assemblyName="System.Core" targetFramework="net45" />
+		</frameworkAssemblies>
+	</metadata>
+	<files>
+		<!-- Add nuget package files -->
+		<!--<file src="JetBrains.Annotations.dll" target="lib\portable-win+net45+MonoAndroid16+MonoMac40+MonoTouch40+sl40+wp71\JetBrains.Annotations.dll" />
+		<file src="JetBrains.Annotations.xml" target="lib\portable-win+net45+MonoAndroid16+MonoMac40+MonoTouch40+sl40+wp71\JetBrains.Annotations.xml" />
+		<file src="JetBrains.Annotations.pdb" target="lib\portable-win+net45+MonoAndroid16+MonoMac40+MonoTouch40+sl40+wp71\JetBrains.Annotations.pdb" />-->
+	</files>
+</package>
