@@ -6,7 +6,7 @@
 	using FileAccess = Portable.IO.FileAccess;
 
 	[TestFixture]
-	public class FileTests
+	public class FileTests : TestBase
 	{
 		[Test]
 		public void ShouldOpenFileRead()

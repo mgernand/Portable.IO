@@ -7,7 +7,7 @@
 	using NUnit.Framework;
 
 	[TestFixture]
-	public class DirectoryTests
+	public class DirectoryTests : TestBase
 	{
 		[Test]
 		public void ShouldCreateFile()

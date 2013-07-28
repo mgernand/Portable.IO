@@ -29,8 +29,10 @@
 		{
 #if NET
 			return new NetFileSystem();
+#elif WINDOWS_PHONE
+			return new WindowsPhoneFileSystem();
 #else
-		return null;
+			return null;
 #endif
 		}
 	}

@@ -2,7 +2,7 @@
 {
 	using System.Threading.Tasks;
 
-	internal abstract class FileSystemBase : IFileSystem
+	public abstract class FileSystemBase : IFileSystem
 	{
 		public abstract IFile GetFile(string path);
 
