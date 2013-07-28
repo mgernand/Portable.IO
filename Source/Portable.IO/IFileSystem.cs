@@ -1,5 +1,7 @@
 ﻿namespace Portable.IO
 {
+	using System.Threading.Tasks;
+
 	/// <summary>
 	/// Contract for platform-specific entry pointsto the underlying file system. 
 	/// </summary>
@@ -12,11 +14,15 @@
 		/// <returns></returns>
 		IFile GetFile(string path);
 
+		Task<IFile> GetFileAsync(string path);
+
 		/// <summary>
 		/// Gets the directory for the given path.
 		/// </summary>
 		/// <param name="path"></param>
 		/// <returns></returns>
 		IDirectory GetDirectory(string path);
+
+		Task<IDirectory> GetDirectoryAsync(string path);
 	}
 }
