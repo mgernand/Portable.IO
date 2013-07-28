@@ -13,10 +13,6 @@
 			this.Path = path;
 		}
 
-		public override string Name { get; protected set; }
-
-		public override string Path { get; protected set; }
-
 		public override bool Exists
 		{
 			get { return System.IO.Directory.Exists(this.Path); }

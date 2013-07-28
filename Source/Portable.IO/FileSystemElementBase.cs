@@ -2,8 +2,8 @@
 {
 	internal abstract class FileSystemElementBase : IFileSystemElement
 	{
-		public abstract string Name { get; protected set; }
-		public abstract string Path { get; protected set; }
+		public string Name { get; protected set; }
+		public string Path { get; protected set; }
 		public abstract bool Exists { get; }
 	}
 }

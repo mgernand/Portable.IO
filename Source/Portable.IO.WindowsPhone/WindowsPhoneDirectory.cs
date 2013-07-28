@@ -12,10 +12,6 @@
 			throw new System.NotImplementedException();
 		}
 
-		public override string Name { get; protected set; }
-
-		public override string Path { get; protected set; }
-
 		public override bool Exists
 		{
 			get { throw new System.NotImplementedException(); }
