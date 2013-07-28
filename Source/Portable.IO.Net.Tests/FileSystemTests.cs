@@ -9,10 +9,7 @@
 		[Test]
 		public void ShouldCreateFileSystem()
 		{
-			// Arrange
-			PortableIO.Configure(typeof(NetFileSystemFactory));
-
-			// Act
+			// Arrange & Act
 			IFileSystem fileSystem = FileSystem.Current;
 
 			// Assert

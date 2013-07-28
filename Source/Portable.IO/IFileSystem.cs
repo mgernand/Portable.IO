@@ -1,5 +1,8 @@
 ﻿namespace Portable.IO
 {
+	/// <summary>
+	/// Contract for platform-specific entry pointsto the underlying file system. 
+	/// </summary>
 	public interface IFileSystem
 	{
 		/// <summary>

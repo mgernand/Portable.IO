@@ -1,4 +1,4 @@
-﻿namespace Portable.IO.Net
+﻿namespace Portable.IO
 {
 	internal sealed class NetFile : IFile
 	{

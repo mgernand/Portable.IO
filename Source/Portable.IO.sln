@@ -31,6 +31,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Net", "Portable
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Net.Tests", "Portable.IO.Net.Tests\Portable.IO.Net.Tests.csproj", "{C26E014A-5926-4964-AFD3-27F79441EF2B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".files", ".files", "{22999453-1718-4FAC-821B-3A19CB65FF41}"
+	ProjectSection(SolutionItems) = preProject
+		FileSystem.cs = FileSystem.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
