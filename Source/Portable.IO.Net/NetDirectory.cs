@@ -4,22 +4,18 @@
 	{
 		public NetDirectory(string path)
 		{
-			throw new System.NotImplementedException();
+			path = System.IO.Path.GetFullPath(path);
+			this.Name = System.IO.Path.GetFileName(path);
+			this.Path = path;
 		}
 
-		public string Name
-		{
-			get { throw new System.NotImplementedException(); }
-		}
+		public string Name { get; private set; }
 
-		public string Path
-		{
-			get { throw new System.NotImplementedException(); }
-		}
+		public string Path { get; private set; }
 
 		public bool Exists
 		{
-			get { throw new System.NotImplementedException(); }
+			get { return System.IO.Directory.Exists(this.Path); }
 		}
 	}
 }
