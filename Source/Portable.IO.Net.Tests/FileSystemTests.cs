@@ -1,6 +1,5 @@
 ﻿namespace Portable.IO.Net.Tests
 {
-	using System.IO;
 	using FluentAssertions;
 	using NUnit.Framework;
 
@@ -75,50 +74,6 @@
 			directory.Should().NotBeNull();
 			directory.Exists.Should().BeTrue();
 			directory.Name.Should().Be("Files");
-		}
-
-		[Test]
-		[ExpectedException(typeof(DirectoryNotFoundException))]
-		public void ShouldThrowOnFileAsDirectory()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-
-			// Act
-			fileSystem.GetDirectory("Files/file.txt");
-		}
-
-		[Test]
-		[ExpectedException(typeof(DirectoryNotFoundException))]
-		public async void ShouldThrowOnFileAsDirectoryAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-
-			// Act
-			await fileSystem.GetDirectoryAsync("Files/file.txt");
-		}
-
-		[Test]
-		[ExpectedException(typeof(DirectoryNotFoundException))]
-		public void ShouldThrowOnDirectoryAsFile()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-
-			// Act
-			fileSystem.GetFile("Files");
-		}
-
-		[Test]
-		[ExpectedException(typeof(DirectoryNotFoundException))]
-		public async void ShouldThrowOnDirectoryAsFileAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-
-			// Act
-			await fileSystem.GetFileAsync("Files");
 		}
 	}
 }

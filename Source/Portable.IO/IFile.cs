@@ -1,23 +1,19 @@
 ﻿namespace Portable.IO
 {
+	using System.IO;
+	using System.Threading.Tasks;
+
 	/// <summary>
 	/// Facade for a file.
 	/// </summary>
-	public interface IFile
+	public interface IFile : IFileSystemElement
 	{
-		/// <summary>
-		/// Gets the name of the file.
-		/// </summary>
-		string Name { get; }
+		//Stream Open(FileAccess fileAccess);
 
-		/// <summary>
-		/// Gets the full path of the file.
-		/// </summary>
-		string Path { get; }
+		//Task<Stream> OpenAsync(FileAccess fileAccess);
 
-		/// <summary>
-		/// Returns <code>true</code> if the file exists, <code>false</code> otherwise.
-		/// </summary>
-		bool Exists { get; }
+		//void Delete();
+
+		//Task DeleteAsync();
 	}
 }

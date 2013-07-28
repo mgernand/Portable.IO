@@ -1,20 +1,36 @@
 ﻿namespace Portable.IO
 {
-	public interface IDirectory
+	using System.Collections.Generic;
+	using System.Threading.Tasks;
+
+	public interface IDirectory : IFileSystemElement
 	{
-		/// <summary>
-		/// Gets the name of the file.
-		/// </summary>
-		string Name { get; }
+		//IFile CreateFile(string name);
 
-		/// <summary>
-		/// Gets the full path of the file.
-		/// </summary>
-		string Path { get; }
+		//Task<IFile> CreateFileAsync(string name);
 
-		/// <summary>
-		/// Returns <code>true</code> if the directory exists, <code>false</code> otherwise.
-		/// </summary>
-		bool Exists { get; }
+		//IFile GetFile(string name);
+
+		//Task<IFile> GetFileAsync(string name);
+
+		//IEnumerable<IFile> GetFiles();
+
+		//Task<IEnumerable<IFile>> GetFilesAsync();
+
+		//IDirectory CreateDirectory(string name);
+
+		//Task<IDirectory> CreateDirectoryAsync(string name);
+
+		//IDirectory GetDirectory(string name);
+
+		//Task<IDirectory> GetDirectoryAsync(string name);
+
+		//IEnumerable<IDirectory> GetDirectories();
+
+		//Task<IEnumerable<IDirectory>> GetDirectoriesAsync();
+
+		//void Delete();
+
+		//Task DeleteAsync();
 	}
 }

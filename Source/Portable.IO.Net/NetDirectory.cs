@@ -1,6 +1,6 @@
 ﻿namespace Portable.IO
 {
-	internal sealed class NetDirectory : IDirectory
+	internal sealed class NetDirectory : DirectoryBase
 	{
 		public NetDirectory(string path)
 		{
@@ -9,11 +9,11 @@
 			this.Path = path;
 		}
 
-		public string Name { get; private set; }
+		public override string Name { get; protected set; }
 
-		public string Path { get; private set; }
+		public override string Path { get; protected set; }
 
-		public bool Exists
+		public override bool Exists
 		{
 			get { return System.IO.Directory.Exists(this.Path); }
 		}

@@ -51,9 +51,14 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="DirectoryBase.cs" />
+    <Compile Include="FileAccess.cs" />
+    <Compile Include="FileBase.cs" />
+    <Compile Include="FileSystemBase.cs" />
     <Compile Include="IDirectory.cs" />
     <Compile Include="IFile.cs" />
     <Compile Include="IFileSystem.cs" />
+    <Compile Include="IFileSystemElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

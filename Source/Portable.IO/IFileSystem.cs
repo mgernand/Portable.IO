@@ -14,6 +14,11 @@
 		/// <returns></returns>
 		IFile GetFile(string path);
 
+		/// <summary>
+		/// Gets a file for the given path.
+		/// </summary>
+		/// <param name="path"></param>
+		/// <returns></returns>
 		Task<IFile> GetFileAsync(string path);
 
 		/// <summary>
@@ -23,6 +28,11 @@
 		/// <returns></returns>
 		IDirectory GetDirectory(string path);
 
+		/// <summary>
+		/// Gets the directory for the given path.
+		/// </summary>
+		/// <param name="path"></param>
+		/// <returns></returns>
 		Task<IDirectory> GetDirectoryAsync(string path);
 	}
 }
