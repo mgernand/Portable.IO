@@ -5,32 +5,32 @@
 
 	public interface IDirectory : IFileSystemElement
 	{
-		//IFile CreateFile(string name);
+		IFile CreateFile(string name);
 
-		//Task<IFile> CreateFileAsync(string name);
+		Task<IFile> CreateFileAsync(string name);
 
-		//IFile GetFile(string name);
+		IFile GetFile(string name);
 
-		//Task<IFile> GetFileAsync(string name);
+		Task<IFile> GetFileAsync(string name);
 
-		//IEnumerable<IFile> GetFiles();
+		IEnumerable<IFile> GetFiles();
 
-		//Task<IEnumerable<IFile>> GetFilesAsync();
+		Task<IEnumerable<IFile>> GetFilesAsync();
 
-		//IDirectory CreateDirectory(string name);
+		IDirectory CreateDirectory(string name);
 
-		//Task<IDirectory> CreateDirectoryAsync(string name);
+		Task<IDirectory> CreateDirectoryAsync(string name);
 
-		//IDirectory GetDirectory(string name);
+		IDirectory GetDirectory(string name);
 
-		//Task<IDirectory> GetDirectoryAsync(string name);
+		Task<IDirectory> GetDirectoryAsync(string name);
 
-		//IEnumerable<IDirectory> GetDirectories();
+		IEnumerable<IDirectory> GetDirectories();
 
-		//Task<IEnumerable<IDirectory>> GetDirectoriesAsync();
+		Task<IEnumerable<IDirectory>> GetDirectoriesAsync();
 
-		//void Delete();
+		void Delete();
 
-		//Task DeleteAsync();
+		Task DeleteAsync();
 	}
 }

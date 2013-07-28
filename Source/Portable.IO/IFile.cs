@@ -8,12 +8,12 @@
 	/// </summary>
 	public interface IFile : IFileSystemElement
 	{
-		//Stream Open(FileAccess fileAccess);
+		Stream Open(FileAccess fileAccess);
 
-		//Task<Stream> OpenAsync(FileAccess fileAccess);
+		Task<Stream> OpenAsync(FileAccess fileAccess);
 
-		//void Delete();
+		void Delete();
 
-		//Task DeleteAsync();
+		Task DeleteAsync();
 	}
 }
