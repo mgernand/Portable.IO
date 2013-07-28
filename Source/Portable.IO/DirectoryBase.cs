@@ -1,9 +1,7 @@
 ﻿namespace Portable.IO
 {
-	internal abstract class DirectoryBase : IDirectory
+	internal abstract class DirectoryBase : FileSystemElementBase, IDirectory
 	{
-		public abstract string Name { get; protected set; }
-		public abstract string Path { get; protected set; }
-		public abstract bool Exists { get; }
+
 	}
 }
