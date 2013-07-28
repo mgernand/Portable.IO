@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Net.Tests", "Po
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".files", ".files", "{22999453-1718-4FAC-821B-3A19CB65FF41}"
 	ProjectSection(SolutionItems) = preProject
+		DirectoryNotFoundException.cs = DirectoryNotFoundException.cs
+		FileNotFoundException.cs = FileNotFoundException.cs
 		FileSystem.cs = FileSystem.cs
 	EndProjectSection
 EndProject
