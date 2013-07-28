@@ -1,5 +1,6 @@
 ﻿namespace Portable.IO
 {
+	using System;
 	using System.IO;
 
 	internal sealed class NetFile : FileBase
@@ -22,12 +23,29 @@
 
 		public override Stream Open(FileAccess fileAccess)
 		{
-			throw new System.NotImplementedException();
+			Stream result;
+
+			switch(fileAccess)
+			{
+				case FileAccess.Read:
+					result = System.IO.File.OpenRead(this.Path);
+					break;
+				case FileAccess.Write:
+					result = System.IO.File.OpenWrite(this.Path);
+					break;
+				case FileAccess.ReadWrite:
+					result = File.Open(this.Path, FileMode.Open, System.IO.FileAccess.ReadWrite);
+					break;
+				default:
+					throw new ArgumentOutOfRangeException("fileAccess");
+			}
+
+			return result;
 		}
 
 		public override void Delete()
 		{
-			throw new System.NotImplementedException();
+			System.IO.File.Delete(this.Path);
 		}
 	}
 }
