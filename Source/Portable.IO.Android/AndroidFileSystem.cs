@@ -4,14 +4,14 @@ namespace Portable.IO.Android
 {
 	internal sealed class AndroidFileSystem : FileSytemBase
 	{
-		public override IFile GetFile (string path)
+		public override IFile GetFile(string path)
 		{
-			throw new NotImplementedException ();
+			return new AndroidFile(path);
 		}
 
-		public override IDirectory GetDirectory (string path)
+		public override IDirectory GetDirectory(string path)
 		{
-			throw new NotImplementedException ();
+			return new AndroidDirectory(path);
 		}
 	}
 }
