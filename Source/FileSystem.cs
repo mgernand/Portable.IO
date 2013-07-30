@@ -12,9 +12,12 @@
 		/// <summary>
 		/// Gets the current platform-specific implementation of <see cref="IFileSystem"/>.
 		/// </summary>
-		public static IFileSystem Current {
-			get {
-				if (CurrentFileSystem == null) {
+		public static IFileSystem Current 
+		{
+			get 
+			{
+				if (CurrentFileSystem == null) 
+				{
 					throw new NotImplementedException ("The platform-specific implementation of IFileSystem is missing.");
 				}
 

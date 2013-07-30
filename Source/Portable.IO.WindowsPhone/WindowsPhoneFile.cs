@@ -1,30 +1,52 @@
 ﻿namespace Portable.IO
 {
+	using System;
 	using System.IO;
 	using System.IO.IsolatedStorage;
 
 	internal sealed class WindowsPhoneFile : FileBase
 	{
-		private static IsolatedStorageFile Root = IsolatedStorageFile.GetUserStoreForApplication();
+		private readonly IsolatedStorageFile root;
 
-		public WindowsPhoneFile(string path)
+		public WindowsPhoneFile(IsolatedStorageFile root, string path)
 		{
-			throw new System.NotImplementedException();
+			this.root = root;
+
+			path = System.IO.Path.GetFullPath(path);
+			this.Name = System.IO.Path.GetFileName(path);
+			this.Path = path;
 		}
 
 		public override bool Exists
 		{
-			get { throw new System.NotImplementedException(); }
+			get { return this.root.FileExists(this.Path); }
 		}
 
 		public override Stream Open(FileAccess fileAccess)
 		{
-			throw new System.NotImplementedException();
+			System.IO.FileAccess nativeFileAccess;
+			switch(fileAccess)
+			{
+				case FileAccess.Read:
+					nativeFileAccess = System.IO.FileAccess.Read;
+					break;
+				case FileAccess.Write:
+					nativeFileAccess = System.IO.FileAccess.Write;
+					break;
+				case FileAccess.ReadWrite:
+					nativeFileAccess = System.IO.FileAccess.ReadWrite;
+					break;
+				default:
+					throw new ArgumentOutOfRangeException("fileAccess");
+			}
+
+			IsolatedStorageFileStream stream = this.root.OpenFile(this.Path, FileMode.Open, nativeFileAccess, FileShare.Read);
+			return stream;
 		}
 
 		public override void Delete()
 		{
-			throw new System.NotImplementedException();
+			this.root.DeleteFile(this.Path);
 		}
 	}
 }

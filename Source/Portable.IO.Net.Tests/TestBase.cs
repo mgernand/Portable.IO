@@ -1,4 +1,4 @@
-﻿namespace Portable.IO.Net.Tests
+﻿namespace Portable.IO.Tests.Net
 {
 	using NUnit.Framework;
 

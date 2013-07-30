@@ -4,14 +4,16 @@
 
 	internal sealed class WindowsPhoneFileSystem : FileSystemBase
 	{
+		private static readonly IsolatedStorageFile Root = IsolatedStorageFile.GetUserStoreForApplication();
+
 		public override IFile GetFile(string path)
 		{
-			return new WindowsPhoneFile(path);
+			return new WindowsPhoneFile(Root, path);
 		}
 
 		public override IDirectory GetDirectory(string path)
 		{
-			return new WindowsPhoneDirectory(path);
+			return new WindowsPhoneDirectory(Root, path);
 		}
 	}
 }

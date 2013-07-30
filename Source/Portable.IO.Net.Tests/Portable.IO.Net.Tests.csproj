@@ -7,8 +7,8 @@
     <ProjectGuid>{C26E014A-5926-4964-AFD3-27F79441EF2B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Portable.IO.Net.Tests</RootNamespace>
-    <AssemblyName>Portable.IO.Net.Tests</AssemblyName>
+    <RootNamespace>Portable.IO.Tests.Net</RootNamespace>
+    <AssemblyName>Portable.IO.Tests.Net</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
