@@ -5,19 +5,43 @@
 
 	internal sealed class IOSFile : FileBase
 	{
+		public IOSFile(string path)
+		{
+			path = System.IO.Path.GetFullPath(path);
+			this.Name = System.IO.Path.GetFileName(path);
+			this.Path = path;
+		}
+
 		public override bool Exists
 		{
-			get { throw new NotImplementedException(); }
+			get { return System.IO.File.Exists(this.Path); }
 		}
 
 		public override Stream Open(FileAccess fileAccess)
 		{
-			throw new NotImplementedException();
+			Stream result;
+
+			switch (fileAccess)
+			{
+				case FileAccess.Read:
+					result = System.IO.File.OpenRead(this.Path);
+					break;
+				case FileAccess.Write:
+					result = System.IO.File.OpenWrite(this.Path);
+					break;
+				case FileAccess.ReadWrite:
+					result = File.Open(this.Path, FileMode.Open, System.IO.FileAccess.ReadWrite);
+					break;
+				default:
+					throw new ArgumentOutOfRangeException("fileAccess");
+			}
+
+			return result;
 		}
 
 		public override void Delete()
 		{
-			throw new NotImplementedException();
+			System.IO.File.Delete(this.Path);
 		}
 	}
 }

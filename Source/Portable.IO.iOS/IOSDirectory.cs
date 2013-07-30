@@ -2,47 +2,61 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using System.Linq;
 
 	internal sealed class IOSDirectory : DirectoryBase
 	{
+		public IOSDirectory(string path)
+		{
+			path = System.IO.Path.GetFullPath(path);
+			this.Name = System.IO.Path.GetFileName(path);
+			this.Path = path;
+		}
+
 		public override bool Exists
 		{
-			get { throw new NotImplementedException(); }
+			get { return System.IO.Directory.Exists(this.Path); }
 		}
 
 		public override IFile CreateFile(string name)
 		{
-			throw new NotImplementedException();
+			string newPath = System.IO.Path.Combine(this.Path, name);
+			System.IO.File.Create(newPath).Dispose();
+			return new IOSFile(newPath);
 		}
 
 		public override IFile GetFile(string name)
 		{
-			throw new NotImplementedException();
+			string newPath = System.IO.Path.Combine(this.Path, name);
+			return new IOSFile(newPath);
 		}
 
 		public override IEnumerable<IFile> GetFiles()
 		{
-			throw new NotImplementedException();
+			return System.IO.Directory.GetFiles(this.Path).Select(x => new IOSFile(x)).ToArray();
 		}
 
 		public override IDirectory CreateDirectory(string name)
 		{
-			throw new NotImplementedException();
+			string newPath = System.IO.Path.Combine(this.Path, name);
+			System.IO.Directory.CreateDirectory(newPath);
+			return new IOSDirectory(newPath);
 		}
 
 		public override IDirectory GetDirectory(string name)
 		{
-			throw new NotImplementedException();
+			string newPath = System.IO.Path.Combine(this.Path, name);
+			return new IOSDirectory(newPath);
 		}
 
 		public override IEnumerable<IDirectory> GetDirectories()
 		{
-			throw new NotImplementedException();
+			return System.IO.Directory.GetDirectories(Path).Select(x => new IOSDirectory(x)).ToArray();
 		}
 
 		public override void Delete()
 		{
-			throw new NotImplementedException();
+			System.IO.Directory.Delete(this.Path, true);
 		}
 	}
 }

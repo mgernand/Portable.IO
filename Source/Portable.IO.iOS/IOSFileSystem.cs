@@ -1,17 +1,15 @@
 ﻿namespace Portable.IO
 {
-	using System;
-
 	internal sealed class IOSFileSystem : FileSystemBase
 	{
 		public override IFile GetFile(string path)
 		{
-			throw new NotImplementedException();
+			return new IOSFile(path);
 		}
 
 		public override IDirectory GetDirectory(string path)
 		{
-			throw new NotImplementedException();
+			return new IOSDirectory(path);
 		}
 	}
 }
