@@ -111,11 +111,11 @@
 			this.RootFrame = new PhoneApplicationFrame();
 			this.RootFrame.Navigated += this.CompleteInitializePhoneApplication;
 
-			RootFrame.Source = new Uri("/PUnit.WindowsPhone;component/MainPage.xaml", UriKind.Relative);
-			PortableTestRunner.Current.UnitTestsAssembly = "Portable.IO.Tests";
-
 			// Handle navigation failures
 			this.RootFrame.NavigationFailed += this.RootFrame_NavigationFailed;
+
+			RootFrame.Source = new Uri("/PUnit.WindowsPhone;component/MainPage.xaml", UriKind.Relative);
+			PortableTestRunner.Current.UnitTestsAssembly = "Portable.IO.Tests";
 
 			// Ensure we don't initialize again
 			this.phoneApplicationInitialized = true;
