@@ -1,9 +1,11 @@
 ﻿namespace Portable.IO.Tests.WindowsPhone
 {
+	using System;
 	using System.Windows;
 	using System.Windows.Navigation;
 	using Microsoft.Phone.Controls;
 	using Microsoft.Phone.Shell;
+	using PUnit;
 
 	public partial class App : Application
 	{
@@ -108,6 +110,9 @@
 			// screen to remain active until the application is ready to render.
 			this.RootFrame = new PhoneApplicationFrame();
 			this.RootFrame.Navigated += this.CompleteInitializePhoneApplication;
+
+			RootFrame.Source = new Uri("/PUnit.WindowsPhone;component/MainPage.xaml", UriKind.Relative);
+			PortableTestRunner.Current.UnitTestsAssembly = "Portable.IO.Tests";
 
 			// Handle navigation failures
 			this.RootFrame.NavigationFailed += this.RootFrame_NavigationFailed;
