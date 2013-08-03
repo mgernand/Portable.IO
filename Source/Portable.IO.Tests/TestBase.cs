@@ -1,4 +1,4 @@
-﻿namespace Portable.IO.Tests.Net
+﻿namespace Portable.IO.Tests
 {
 	using NUnit.Framework;
 
@@ -7,22 +7,22 @@
 		[TestFixtureSetUp]
 		public void FixtureSetUp()
 		{
-			IFileSystem fileSystem = FileSystem.Current;
+			//IFileSystem fileSystem = FileSystem.Current;
 
-			IDirectory root = fileSystem.GetDirectory("");
-			IDirectory files = root.CreateDirectory("Files");
-			IFile file = files.CreateFile("file.txt");
-			IDirectory subfolder = files.CreateDirectory("Subfolder");
-			subfolder.CreateFile("file.txt");
+			//IDirectory root = fileSystem.GetDirectory("");
+			//IDirectory files = root.CreateDirectory("Files");
+			//IFile file = files.CreateFile("file.txt");
+			//IDirectory subfolder = files.CreateDirectory("Subfolder");
+			//subfolder.CreateFile("file.txt");
 		}
 
 		[TestFixtureTearDown]
 		public void FixtureTearDown()
 		{
-			IFileSystem fileSystem = FileSystem.Current;
+			//IFileSystem fileSystem = FileSystem.Current;
 
-			IDirectory directory = fileSystem.GetDirectory("Files");
-			directory.Delete();
+			//IDirectory directory = fileSystem.GetDirectory("Files");
+			//directory.Delete();
 		}
 	}
 }
