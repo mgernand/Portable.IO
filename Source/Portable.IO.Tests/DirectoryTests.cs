@@ -19,8 +19,10 @@
 			//IFile file = directory.CreateFile("demo.txt");
 
 			//// Assert
-			//file.Should().NotBeNull();
-			//file.Exists.Should().BeTrue();
+			////file.Should().NotBeNull();
+			////file.Exists.Should().BeTrue();
+			//Assert.IsNotNull(file);
+			//Assert.IsTrue(file.Exists);
 			//file.Delete();
 		}
 

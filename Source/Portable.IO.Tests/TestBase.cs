@@ -4,8 +4,10 @@
 
 	public abstract class TestBase
 	{
-		[TestFixtureSetUp]
-		public void FixtureSetUp()
+		protected IFileSystem FileSystem { get; private set; }
+
+		[SetUp]
+		public void SetUp()
 		{
 			//IFileSystem fileSystem = FileSystem.Current;
 
@@ -16,8 +18,8 @@
 			//subfolder.CreateFile("file.txt");
 		}
 
-		[TestFixtureTearDown]
-		public void FixtureTearDown()
+		[TearDown]
+		public void TearDown()
 		{
 			//IFileSystem fileSystem = FileSystem.Current;
 

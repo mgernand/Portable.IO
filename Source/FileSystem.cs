@@ -7,7 +7,7 @@
 	/// </summary>
 	public static class FileSystem
 	{
-		private static readonly IFileSystem CurrentFileSystem = FileSystem.CreateFileSystem ();
+		private static readonly IFileSystem CurrentFileSystem = FileSystem.CreateFileSystem();
 
 		/// <summary>
 		/// Gets the current platform-specific implementation of <see cref="IFileSystem"/>.
@@ -25,16 +25,16 @@
 			}
 		}
 
-		private static IFileSystem CreateFileSystem ()
+		private static IFileSystem CreateFileSystem()
 		{
 #if NET
 			return new NetFileSystem();
 #elif WINDOWS_PHONE
 			return new WindowsPhoneFileSystem();
+#elif ANDROID
+			return new AndroidFileSystem();
 #elif IOS
 			return new IOSFileSystem();
-#elif ANDROID
-			return new AndroidFileSystem ();
 #else
 			return null;
 #endif
