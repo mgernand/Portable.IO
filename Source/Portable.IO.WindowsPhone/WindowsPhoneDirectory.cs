@@ -1,11 +1,13 @@
 ﻿namespace Portable.IO
 {
 	using System.Collections.Generic;
+	using System.Diagnostics;
 	using System.Globalization;
 	using System.IO;
 	using System.IO.IsolatedStorage;
 	using System.Linq;
 
+	[DebuggerDisplay("Name = {Name}")]
 	internal sealed class WindowsPhoneDirectory : DirectoryBase
 	{
 		private readonly IsolatedStorageFile root;
@@ -31,7 +33,7 @@
 		public override IFile CreateFile(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
-			new IsolatedStorageFileStream(newPath, FileMode.OpenOrCreate, this.root).Dispose();
+			new IsolatedStorageFileStream(name, FileMode.OpenOrCreate, this.root).Dispose();
 			return new WindowsPhoneFile(this.root, newPath);
 		}
 
@@ -43,13 +45,15 @@
 
 		public override IEnumerable<IFile> GetFiles()
 		{
-			return this.root.GetFileNames().Select(x => new WindowsPhoneFile(this.root, System.IO.Path.Combine(this.Path, x))).ToArray();
+			string[] fileNames = this.root.GetFileNames();
+			WindowsPhoneFile[] files = fileNames.Select(x => new WindowsPhoneFile(this.root, System.IO.Path.Combine(this.Path, x))).ToArray();
+			return files;
 		}
 
 		public override IDirectory CreateDirectory(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
-			this.root.CreateDirectory(newPath);
+			this.root.CreateDirectory(name);
 			return new WindowsPhoneDirectory(this.root, newPath);
 		}
 
@@ -61,11 +65,23 @@
 
 		public override IEnumerable<IDirectory> GetDirectories()
 		{
-			return this.root.GetDirectoryNames().Select(x => new WindowsPhoneDirectory(this.root, System.IO.Path.Combine(this.Path, x))).ToArray();
+			string[] directoryNames = this.root.GetDirectoryNames();
+			WindowsPhoneDirectory[] directories = directoryNames.Select(x => new WindowsPhoneDirectory(this.root, System.IO.Path.Combine(this.Path, x))).ToArray();
+			return directories;
 		}
 
 		public override void Delete()
 		{
+			foreach (IFile file in this.GetFiles())
+			{
+				file.Delete();
+			}
+
+			foreach (IDirectory directory in this.GetDirectories())
+			{
+				directory.Delete();
+			}
+
 			this.root.DeleteDirectory(this.Path);
 		}
 	}

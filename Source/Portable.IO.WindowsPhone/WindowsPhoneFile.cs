@@ -1,9 +1,11 @@
 ﻿namespace Portable.IO
 {
 	using System;
+	using System.Diagnostics;
 	using System.IO;
 	using System.IO.IsolatedStorage;
 
+	[DebuggerDisplay("Name = {Name}")]
 	internal sealed class WindowsPhoneFile : FileBase
 	{
 		private readonly IsolatedStorageFile root;

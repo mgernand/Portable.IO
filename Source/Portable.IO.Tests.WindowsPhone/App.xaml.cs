@@ -1,11 +1,9 @@
 ﻿namespace Portable.IO.Tests.WindowsPhone
 {
-	using System;
 	using System.Windows;
 	using System.Windows.Navigation;
 	using Microsoft.Phone.Controls;
 	using Microsoft.Phone.Shell;
-	using PUnit;
 	using PUnit.WindowsPhone;
 
 	public partial class App : Application
