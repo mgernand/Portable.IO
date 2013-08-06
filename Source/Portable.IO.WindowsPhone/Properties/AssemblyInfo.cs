@@ -9,7 +9,7 @@ using System.Resources;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
-[assembly: Guid("dd8a8b7d-39ed-4d90-9e30-ba9171c8af85")]
+[assembly: Guid("1c70dbb2-1a2f-4739-a6e1-b5caa49605f6")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
 
 [assembly: InternalsVisibleTo("Portable.IO.Tests.WindowsPhone")]
