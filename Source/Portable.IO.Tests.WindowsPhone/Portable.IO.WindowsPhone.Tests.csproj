@@ -101,6 +101,18 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\Portable.IO.Tests\DirectoryTests.cs">
+      <Link>DirectoryTests.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable.IO.Tests\FileSystemTests.cs">
+      <Link>FileSystemTests.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable.IO.Tests\FileTests.cs">
+      <Link>FileTests.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable.IO.Tests\TestBase.cs">
+      <Link>TestBase.cs</Link>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -131,10 +143,6 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Portable.IO.Tests\Portable.IO.Tests.csproj">
-      <Project>{253D1884-5E29-4A72-8510-7B8F93353C5F}</Project>
-      <Name>Portable.IO.Tests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Portable.IO.WindowsPhone\Portable.IO.WindowsPhone.csproj">
       <Project>{DD8A8B7D-39ED-4D90-9E30-BA9171C8AF85}</Project>
       <Name>Portable.IO.WindowsPhone</Name>
