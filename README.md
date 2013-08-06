@@ -1,16 +1,10 @@
 Portable.IO
 ===========
 
-A simple abstraction for accessing files and folders on different platforms. The following platforms are supported:
+> __This project is still in a early development stage and is not intended to be used yet!__
 
-* Full .NET/Mono
-* Silverlight 4
-* Silverlight 5
-* Windows Runtime
-* Windows Phone 7
-* Windows Phone 8
-* Xamarin.Android
-* Xamarin.iOS
-* Xamarin.Mac
+A simple abstraction for accessing files and folders on different platforms.
 
-The library is based on the Codeplex project PCLStorage.
+----
+
+The library is based on the Codeplex project [PCLStorage](https://pclstorage.codeplex.com/).
