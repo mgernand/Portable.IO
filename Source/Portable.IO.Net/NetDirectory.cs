@@ -1,7 +1,6 @@
 ﻿namespace Portable.IO
 {
 	using System.Collections.Generic;
-	using System.IO;
 	using System.Linq;
 
 	internal sealed class NetDirectory : DirectoryBase

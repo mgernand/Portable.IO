@@ -27,7 +27,7 @@
 
 		private static IFileSystem CreateFileSystem()
 		{
-#if NET
+#if NET45
 			return new NetFileSystem();
 #elif WINDOWS_PHONE
 			return new WindowsPhoneFileSystem();

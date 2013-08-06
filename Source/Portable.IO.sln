@@ -10,7 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{AE492023-40B8-4D65-90C1-823CB59C2EB0}"
 	ProjectSection(SolutionItems) = preProject
 		..\Build\Build.proj = ..\Build\Build.proj
-		..\Build\Portable.IO.nuspec = ..\Build\Portable.IO.nuspec
+		..\Build\Portable.IO.Net.nuspec = ..\Build\Portable.IO.Net.nuspec
+		..\Build\Portable.IO.WindowsPhone.nuspec = ..\Build\Portable.IO.WindowsPhone.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{E6E33B59-304A-4B9E-A70E-B58817606FA6}"
@@ -44,8 +45,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".files", ".files", "{22999453-1718-4FAC-821B-3A19CB65FF41}"
 	ProjectSection(SolutionItems) = preProject
 		DirectoryNotFoundException.cs = DirectoryNotFoundException.cs
+		DirectoryTests.cs = DirectoryTests.cs
 		FileNotFoundException.cs = FileNotFoundException.cs
 		FileSystem.cs = FileSystem.cs
+		FileSystemTests.cs = FileSystemTests.cs
+		FileTests.cs = FileTests.cs
+		TestBase.cs = TestBase.cs
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Tests.Net", "Portable.IO.Tests.Net\Portable.IO.Tests.Net.csproj", "{8E47B485-5486-4774-8505-163608A03018}"

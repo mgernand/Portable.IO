@@ -2,6 +2,11 @@
 {
 	internal sealed class NetFileSystem : FileSystemBase
 	{
+		public override IDirectory AppDirectory
+		{
+			get { throw new System.NotImplementedException(); }
+		}
+
 		public override IFile GetFile(string path)
 		{
 			return new NetFile(path);

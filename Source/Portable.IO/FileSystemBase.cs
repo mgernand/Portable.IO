@@ -4,6 +4,8 @@
 
 	internal abstract class FileSystemBase : IFileSystem
 	{
+		public abstract IDirectory AppDirectory { get; }
+
 		public abstract IFile GetFile(string path);
 
 		public async Task<IFile> GetFileAsync(string path)
