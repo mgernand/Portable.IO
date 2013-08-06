@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO", "Portable.IO\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Net", "Portable.IO.Net\Portable.IO.Net.csproj", "{77EA7083-22CF-4BE0-BFA4-C62AABD8DB68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.WindowsPhone", "Portable.IO.WindowsPhone\Portable.IO.WindowsPhone.csproj", "{DD8A8B7D-39ED-4D90-9E30-BA9171C8AF85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.WindowsPhone8", "Portable.IO.WindowsPhone\Portable.IO.WindowsPhone8.csproj", "{DD8A8B7D-39ED-4D90-9E30-BA9171C8AF85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Android", "Portable.IO.Android\Portable.IO.Android.csproj", "{FEC18EEA-57C4-4182-8187-73BB0210BDAD}"
 EndProject

@@ -143,9 +143,9 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Portable.IO.WindowsPhone\Portable.IO.WindowsPhone.csproj">
+    <ProjectReference Include="..\Portable.IO.WindowsPhone\Portable.IO.WindowsPhone8.csproj">
       <Project>{DD8A8B7D-39ED-4D90-9E30-BA9171C8AF85}</Project>
-      <Name>Portable.IO.WindowsPhone</Name>
+      <Name>Portable.IO.WindowsPhone8</Name>
     </ProjectReference>
     <ProjectReference Include="..\Portable.IO\Portable.IO.csproj">
       <Project>{6C9E1ADE-29C6-4968-A078-A23571A48751}</Project>
