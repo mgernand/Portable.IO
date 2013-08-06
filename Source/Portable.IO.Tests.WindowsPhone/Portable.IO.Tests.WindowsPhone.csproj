@@ -169,12 +169,6 @@
     <Reference Include="Portable.Reflection">
       <HintPath>..\packages\Portable.NUnitLite.1.0.0.1\lib\portable-win+net45+MonoAndroid16+MonoMac40+MonoTouch40+sl40+wp71\Portable.Reflection.dll</HintPath>
     </Reference>
-    <Reference Include="PUnit">
-      <HintPath>..\packages\PUnit.WindowsPhone.1.0.0\lib\windowsphone8\PUnit.dll</HintPath>
-    </Reference>
-    <Reference Include="PUnit.WindowsPhone">
-      <HintPath>..\packages\PUnit.WindowsPhone.1.0.0\lib\windowsphone8\PUnit.WindowsPhone.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

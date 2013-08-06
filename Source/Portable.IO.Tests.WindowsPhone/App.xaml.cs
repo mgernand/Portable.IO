@@ -6,6 +6,7 @@
 	using Microsoft.Phone.Controls;
 	using Microsoft.Phone.Shell;
 	using PUnit;
+	using PUnit.WindowsPhone;
 
 	public partial class App : Application
 	{
@@ -114,8 +115,8 @@
 			// Handle navigation failures
 			this.RootFrame.NavigationFailed += this.RootFrame_NavigationFailed;
 
-			RootFrame.Source = new Uri("/PUnit.WindowsPhone;component/MainPage.xaml", UriKind.Relative);
-			PortableTestRunner.Current.UnitTestsAssembly = "Portable.IO.Tests.WindowsPhone";
+			// Configure test runner
+			WindowsPhoneRunner.Configure(this.RootFrame, "Portable.IO.Tests.WindowsPhone");
 
 			// Ensure we don't initialize again
 			this.phoneApplicationInitialized = true;
