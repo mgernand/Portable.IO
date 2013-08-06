@@ -30,7 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{6654
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Tests.WindowsPhone", "Portable.IO.Tests.WindowsPhone\Portable.IO.Tests.WindowsPhone.csproj", "{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.iOS.Tests", "Portable.IO.iOS.Tests\Portable.IO.iOS.Tests.csproj", "{3C80A0FA-A8F0-4CAF-8118-7FFB9C90FB0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Tests.iOS", "Portable.IO.iOS.Tests\Portable.IO.Tests.iOS.csproj", "{3C80A0FA-A8F0-4CAF-8118-7FFB9C90FB0D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Android.Tests", "Portable.IO.Android.Tests\Portable.IO.Android.Tests.csproj", "{BAA17CE6-6099-4BB8-A110-552814701901}"
 EndProject
