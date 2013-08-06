@@ -1,8 +1,9 @@
 using System;
+using Portable.IO;
 
 namespace Portable.IO.Android
 {
-	internal sealed class AndroidFileSystem : FileSytemBase
+	internal sealed class AndroidFileSystem : FileSystemBase
 	{
 		public override IFile GetFile(string path)
 		{
