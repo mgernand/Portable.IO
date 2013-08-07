@@ -6,11 +6,6 @@
 	{
 		private static readonly IsolatedStorageFile Root = IsolatedStorageFile.GetUserStoreForApplication();
 
-		public override IDirectory AppDirectory
-		{
-			get { throw new System.NotImplementedException(); }
-		}
-
 		public override IFile GetFile(string path)
 		{
 			return new WindowsPhoneFile(Root, path);

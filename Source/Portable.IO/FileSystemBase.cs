@@ -4,7 +4,10 @@
 
 	internal abstract class FileSystemBase : IFileSystem
 	{
-		public abstract IDirectory AppDirectory { get; }
+		public IDirectory AppDirectory
+		{
+			get { return this.GetDirectory("."); }
+		}
 
 		public abstract IFile GetFile(string path);
 
