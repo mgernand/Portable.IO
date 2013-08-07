@@ -4,7 +4,7 @@
 	{
 		public override IDirectory AppDirectory
 		{
-			get { throw new System.NotImplementedException(); }
+			get { return this.GetDirectory("."); }
 		}
 
 		public override IFile GetFile(string path)

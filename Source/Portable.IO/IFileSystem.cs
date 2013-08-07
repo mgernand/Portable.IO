@@ -7,10 +7,10 @@
 	/// </summary>
 	public interface IFileSystem
 	{
-		///// <summary>
-		///// Gets the applications directory.
-		///// </summary>
-		//IDirectory AppDirectory { get; }
+		/// <summary>
+		/// Gets the applications directory.
+		/// </summary>
+		IDirectory AppDirectory { get; }
 
 		/// <summary>
 		/// Gets a file for the given path. 
