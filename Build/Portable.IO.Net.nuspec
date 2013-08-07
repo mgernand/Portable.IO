@@ -5,8 +5,8 @@
 		<version>0.0.0</version>
 		<authors>Matthias Gernand</authors>
 		<owners>Matthias Gernand</owners>
-		<licenseUrl>http://www.fluxera.com/license</licenseUrl>
-		<projectUrl>http://www.fluxera.com/</projectUrl>
+		<licenseUrl>https://github.com/mgernand/Portable.IO/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/mgernand/Portable.IO</projectUrl>
 		<!--<iconUrl></iconUrl>-->
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description></description>

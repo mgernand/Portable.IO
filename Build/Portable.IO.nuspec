@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>Portable.IO.WindowsPhone</id>
+		<id>Portable.IO</id>
 		<version>0.0.0</version>
 		<authors>Matthias Gernand</authors>
 		<owners>Matthias Gernand</owners>
@@ -15,15 +15,15 @@
 		<tags></tags>
 		<dependencies>
 			<!-- Add nuget package dependencies -->
+			<package id="Microsoft.Bcl" />
+			<package id="Microsoft.Bcl.Async" />
+			<package id="Microsoft.Bcl.Build" />
 		</dependencies>
 		<frameworkAssemblies>
 		</frameworkAssemblies>
 	</metadata>
 	<files>
 		<!-- Add nuget package files -->
-		<file src="Portable.IO.dll" target="lib\windowsphone8\Portable.IO.dll" />
-		<file src="Portable.IO.WindowsPhone.dll" target="lib\windowsphone8\Portable.IO.WindowsPhone.dll" />
-		<file src="Portable.IO.dll" target="lib\wp71\Portable.IO.dll" />
-		<file src="Portable.IO.WindowsPhone.dll" target="lib\wp71\Portable.IO.WindowsPhone.dll" />
+		<file src="Portable.IO.dll" target="lib\portable-win+net45+MonoAndroid16+MonoMac40+MonoTouch40+sl40+wp71\Portable.IO.dll" />
 	</files>
 </package>
