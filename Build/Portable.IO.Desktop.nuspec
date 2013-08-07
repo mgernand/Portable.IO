@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>Portable.IO.Net</id>
+		<id>Portable.IO.Desktop</id>
 		<version>0.0.0</version>
 		<authors>Matthias Gernand</authors>
 		<owners>Matthias Gernand</owners>
@@ -22,6 +22,6 @@
 	</metadata>
 	<files>
 		<!-- Add nuget package files -->
-		<file src="Portable.IO.Net.dll" target="lib\net45\Portable.IO.Net.dll" />
+		<file src="Portable.IO.Desktop.dll" target="lib\net45\Portable.IO.Desktop.dll" />
 	</files>
 </package>
