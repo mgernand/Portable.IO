@@ -171,11 +171,11 @@
     </Reference>
     <Reference Include="PUnit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\PUnit.WindowsPhone.1.0.1\lib\windowsphone8\PUnit.dll</HintPath>
+      <HintPath>..\packages\PUnit.WindowsPhone.1.0.2\lib\windowsphone8\PUnit.dll</HintPath>
     </Reference>
     <Reference Include="PUnit.WindowsPhone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\PUnit.WindowsPhone.1.0.1\lib\windowsphone8\PUnit.WindowsPhone.dll</HintPath>
+      <HintPath>..\packages\PUnit.WindowsPhone.1.0.2\lib\windowsphone8\PUnit.WindowsPhone.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
