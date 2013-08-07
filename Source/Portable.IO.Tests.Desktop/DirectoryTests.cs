@@ -3,7 +3,7 @@
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
-
+	using FluentAssertions;
 	using NUnit.Framework;
 
 	[TestFixture]
@@ -20,8 +20,8 @@
 			IFile file = directory.CreateFile("demo.txt");
 
 			// Assert
-			Assert.IsNotNull(file);
-			Assert.IsTrue(file.Exists);
+			file.Should().NotBeNull();
+			file.Exists.Should().BeTrue();
 			file.Delete();
 		}
 
@@ -52,8 +52,8 @@
 			IFile file = directory.GetFile("file.txt");
 
 			// Assert
-			Assert.IsNotNull(file);
-			Assert.IsTrue(file.Exists);
+			file.Should().NotBeNull();
+			file.Exists.Should().BeTrue();
 		}
 
 		//[Test]
@@ -82,7 +82,7 @@
 			IEnumerable<IFile> files = directory.GetFiles();
 
 			// Assert
-			Assert.AreEqual(1, files.Count());
+			files.Count().Should().Be(1);
 		}
 
 		//[Test]
@@ -111,8 +111,8 @@
 			IDirectory newDirectory = directory.CreateDirectory(name);
 
 			// Assert
-			Assert.IsNotNull(newDirectory);
-			Assert.IsTrue(newDirectory.Exists);
+			newDirectory.Should().NotBeNull();
+			newDirectory.Exists.Should().BeTrue();
 			newDirectory.Delete();
 		}
 
@@ -144,8 +144,8 @@
 			IDirectory subDirectory = directory.GetDirectory("Subfolder");
 
 			// Assert
-			Assert.IsNotNull(subDirectory);
-			Assert.IsTrue(subDirectory.Exists);
+			subDirectory.Should().NotBeNull();
+			subDirectory.Exists.Should().BeTrue();
 		}
 
 		//[Test]
@@ -174,7 +174,7 @@
 			IEnumerable<IDirectory> directories = directory.GetDirectories();
 
 			// Assert
-			Assert.AreEqual(1, directories.Count());
+			directories.Count().Should().Be(1);
 		}
 
 		//[Test]
@@ -204,7 +204,7 @@
 			temp.Delete();
 
 			// Assert
-			Assert.IsFalse(temp.Exists);
+			temp.Exists.Should().BeFalse();
 		}
 
 		//[Test]

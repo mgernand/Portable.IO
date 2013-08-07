@@ -3,6 +3,7 @@
 	using System.IO;
 	using System.Runtime;
 	using System.Threading.Tasks;
+	using FluentAssertions;
 	using NUnit.Framework;
 
 	[TestFixture]
@@ -19,9 +20,9 @@
 			using (Stream stream = file.Open(Portable.IO.FileAccess.Read))
 			{
 				// Assert
-				Assert.IsNotNull(stream);
-				Assert.IsTrue(stream.CanRead);
-				Assert.IsFalse(stream.CanWrite);
+				stream.Should().NotBeNull();
+				stream.CanRead.Should().BeTrue();
+				stream.CanWrite.Should().BeFalse();
 			}
 		}
 
@@ -36,9 +37,9 @@
 			using (Stream stream = file.Open(Portable.IO.FileAccess.Write))
 			{
 				// Assert
-				Assert.IsNotNull(stream);
-				Assert.IsFalse(stream.CanRead);
-				Assert.IsTrue(stream.CanWrite);
+				stream.Should().NotBeNull();
+				stream.CanRead.Should().BeFalse();
+				stream.CanWrite.Should().BeTrue();
 			}	
 		}
 
@@ -53,9 +54,9 @@
 			using (Stream stream = file.Open(Portable.IO.FileAccess.ReadWrite))
 			{
 				// Assert
-				Assert.IsNotNull(stream);
-				Assert.IsTrue(stream.CanRead);
-				Assert.IsTrue(stream.CanWrite);
+				stream.Should().NotBeNull();
+				stream.CanRead.Should().BeTrue();
+				stream.CanWrite.Should().BeTrue();
 			}
 		}
 
@@ -117,13 +118,13 @@
 			IFileSystem fileSystem = FileSystem.Current;
 			IFile file = fileSystem.GetFile("Files/demo.txt");
 			file.Open(Portable.IO.FileAccess.Write).Dispose();
-			Assert.IsTrue(file.Exists);
+			file.Exists.Should().BeTrue();
 
 			// Act
 			file.Delete();
 
 			// Assert
-			Assert.IsFalse(file.Exists);
+			file.Exists.Should().BeFalse();
 		}
 
 		//[Test]
