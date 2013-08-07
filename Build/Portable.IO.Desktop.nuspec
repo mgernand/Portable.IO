@@ -9,13 +9,13 @@
 		<projectUrl>https://github.com/mgernand/Portable.IO</projectUrl>
 		<!--<iconUrl></iconUrl>-->
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description></description>
+		<description>A portable api for filesystem io using a unified interface.</description>
 		<summary></summary>
 		<language>en-US</language>
-		<tags></tags>
+		<tags>io portable net45 file directory</tags>
 		<dependencies>
 			<!-- Add nuget package dependencies -->
-			<package id="Portable.IO" />
+			<dependency id="Portable.IO" />
 		</dependencies>
 		<frameworkAssemblies>
 		</frameworkAssemblies>

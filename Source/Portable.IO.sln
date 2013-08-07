@@ -225,8 +225,6 @@ Global
 		{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}.Release|x86.ActiveCfg = Release|x86
 		{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}.Release|x86.Build.0 = Release|x86
 		{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}.Release|x86.Deploy.0 = Release|x86
@@ -408,7 +406,6 @@ Global
 		{8E47B485-5486-4774-8505-163608A03018}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{8E47B485-5486-4774-8505-163608A03018}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{8E47B485-5486-4774-8505-163608A03018}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{8E47B485-5486-4774-8505-163608A03018}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8E47B485-5486-4774-8505-163608A03018}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
