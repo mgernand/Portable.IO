@@ -10,4 +10,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 [assembly: Guid("1b5332d0-c2df-40ce-8e49-018eb85a2afd")]
 
-[assembly: InternalsVisibleTo("Portable.IO.Tests.Net")]
+[assembly: InternalsVisibleTo("Portable.IO.Tests.Desktop")]

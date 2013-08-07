@@ -9,7 +9,7 @@
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Portable.IO.Tests.WindowsPhone</RootNamespace>
+    <RootNamespace>Portable.IO.Tests</RootNamespace>
     <AssemblyName>Portable.IO.Tests.WindowsPhone</AssemblyName>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <SilverlightVersion>
@@ -101,16 +101,16 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\DirectoryTests.cs">
+    <Compile Include="..\Portable.IO.Tests.Desktop\DirectoryTests.cs">
       <Link>DirectoryTests.cs</Link>
     </Compile>
-    <Compile Include="..\FileSystemTests.cs">
+    <Compile Include="..\Portable.IO.Tests.Desktop\FileSystemTests.cs">
       <Link>FileSystemTests.cs</Link>
     </Compile>
-    <Compile Include="..\FileTests.cs">
+    <Compile Include="..\Portable.IO.Tests.Desktop\FileTests.cs">
       <Link>FileTests.cs</Link>
     </Compile>
-    <Compile Include="..\TestBase.cs">
+    <Compile Include="..\Portable.IO.Tests.Desktop\TestBase.cs">
       <Link>TestBase.cs</Link>
     </Compile>
     <Compile Include="App.xaml.cs">
