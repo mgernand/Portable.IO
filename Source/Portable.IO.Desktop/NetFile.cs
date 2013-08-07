@@ -30,7 +30,7 @@
 					result = System.IO.File.OpenWrite(this.Path);
 					break;
 				case FileAccess.ReadWrite:
-					result = File.Open(this.Path, FileMode.Open, System.IO.FileAccess.ReadWrite);
+					result = File.Open(this.Path, FileMode.OpenOrCreate, System.IO.FileAccess.ReadWrite);
 					break;
 				default:
 					throw new ArgumentOutOfRangeException("fileAccess");

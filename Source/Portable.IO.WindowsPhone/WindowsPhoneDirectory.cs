@@ -16,7 +16,6 @@
 		{
 			this.root = root;
 
-			path = System.IO.Path.GetFullPath(path);
 			if (path.EndsWith(System.IO.Path.DirectorySeparatorChar.ToString(CultureInfo.InvariantCulture)))
 			{
 				path = path.Substring(0, path.Length - 1);
@@ -33,7 +32,7 @@
 		public override IFile CreateFile(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
-			new IsolatedStorageFileStream(name, FileMode.OpenOrCreate, this.root).Dispose();
+			new IsolatedStorageFileStream(newPath, FileMode.OpenOrCreate, this.root).Dispose();
 			return new WindowsPhoneFile(this.root, newPath);
 		}
 
@@ -45,7 +44,7 @@
 
 		public override IEnumerable<IFile> GetFiles()
 		{
-			string[] fileNames = this.root.GetFileNames();
+			string[] fileNames = this.root.GetFileNames(System.IO.Path.Combine(this.Path, "*"));
 			WindowsPhoneFile[] files = fileNames.Select(x => new WindowsPhoneFile(this.root, System.IO.Path.Combine(this.Path, x))).ToArray();
 			return files;
 		}
@@ -53,7 +52,7 @@
 		public override IDirectory CreateDirectory(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
-			this.root.CreateDirectory(name);
+			this.root.CreateDirectory(newPath);
 			return new WindowsPhoneDirectory(this.root, newPath);
 		}
 
@@ -65,24 +64,22 @@
 
 		public override IEnumerable<IDirectory> GetDirectories()
 		{
-			string[] directoryNames = this.root.GetDirectoryNames();
+			string[] directoryNames = this.root.GetDirectoryNames(System.IO.Path.Combine(this.Path, "*"));
 			WindowsPhoneDirectory[] directories = directoryNames.Select(x => new WindowsPhoneDirectory(this.root, System.IO.Path.Combine(this.Path, x))).ToArray();
 			return directories;
 		}
 
 		public override void Delete()
 		{
-			foreach (IFile file in this.GetFiles())
+			foreach(IFile file in this.GetFiles())
 			{
-				file.Delete();
+				if(file.Exists)
+				{
+					file.Delete();
+				}
 			}
 
-			foreach (IDirectory directory in this.GetDirectories())
-			{
-				directory.Delete();
-			}
-
-			this.root.DeleteDirectory(this.Path);
+			this.root.DeleteDirectoryEx(this.Path);
 		}
 	}
 }

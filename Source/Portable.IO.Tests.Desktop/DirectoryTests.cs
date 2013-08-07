@@ -25,21 +25,21 @@
 			file.Delete();
 		}
 
-		[Test]
-		public async void ShouldCreateFileAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IDirectory directory = fileSystem.GetDirectory("Files");
+		//[Test]
+		//public async void ShouldCreateFileAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IDirectory directory = fileSystem.GetDirectory("Files");
 
-			// Act
-			IFile file = await directory.CreateFileAsync("demo.txt");
+		//	// Act
+		//	IFile file = await directory.CreateFileAsync("demo.txt");
 
-			// Assert
-			Assert.IsNotNull(file);
-			Assert.IsTrue(file.Exists);
-			file.Delete();
-		}
+		//	// Assert
+		//	Assert.IsNotNull(file);
+		//	Assert.IsTrue(file.Exists);
+		//	file.Delete();
+		//}
 
 		[Test]
 		public void ShouldGetFile()
@@ -56,20 +56,20 @@
 			Assert.IsTrue(file.Exists);
 		}
 
-		[Test]
-		public async void ShouldGetFileAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IDirectory directory = fileSystem.GetDirectory("Files");
+		//[Test]
+		//public async void ShouldGetFileAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IDirectory directory = fileSystem.GetDirectory("Files");
 
-			// Act
-			IFile file = await directory.GetFileAsync("file.txt");
+		//	// Act
+		//	IFile file = await directory.GetFileAsync("file.txt");
 
-			// Assert
-			Assert.IsNotNull(file);
-			Assert.IsTrue(file.Exists);
-		}
+		//	// Assert
+		//	Assert.IsNotNull(file);
+		//	Assert.IsTrue(file.Exists);
+		//}
 
 		[Test]
 		public void ShouldGetFiles()
@@ -85,19 +85,19 @@
 			Assert.AreEqual(1, files.Count());
 		}
 
-		[Test]
-		public async void ShouldGetFilesAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IDirectory directory = fileSystem.GetDirectory("Files");
+		//[Test]
+		//public async void ShouldGetFilesAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IDirectory directory = fileSystem.GetDirectory("Files");
 
-			// Act
-			IEnumerable<IFile> files = await directory.GetFilesAsync();
+		//	// Act
+		//	IEnumerable<IFile> files = await directory.GetFilesAsync();
 
-			// Assert
-			Assert.AreEqual(1, files.Count());
-		}
+		//	// Assert
+		//	Assert.AreEqual(1, files.Count());
+		//}
 
 		[Test]
 		public void ShouldCreateDirectory()
@@ -116,22 +116,22 @@
 			newDirectory.Delete();
 		}
 
-		[Test]
-		public async void ShouldCreateDirectoryAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IDirectory directory = fileSystem.GetDirectory("Files");
+		//[Test]
+		//public async void ShouldCreateDirectoryAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IDirectory directory = fileSystem.GetDirectory("Files");
 
-			// Act
-			string name = Guid.NewGuid().ToString();
-			IDirectory newDirectory = await directory.CreateDirectoryAsync(name);
+		//	// Act
+		//	string name = Guid.NewGuid().ToString();
+		//	IDirectory newDirectory = await directory.CreateDirectoryAsync(name);
 
-			// Assert
-			Assert.IsNotNull(newDirectory);
-			Assert.IsTrue(newDirectory.Exists);
-			newDirectory.Delete();
-		}
+		//	// Assert
+		//	Assert.IsNotNull(newDirectory);
+		//	Assert.IsTrue(newDirectory.Exists);
+		//	newDirectory.Delete();
+		//}
 
 		[Test]
 		public void ShouldGetDirectory()
@@ -148,20 +148,20 @@
 			Assert.IsTrue(subDirectory.Exists);
 		}
 
-		[Test]
-		public async void ShouldGetDirectoryAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IDirectory directory = fileSystem.GetDirectory("Files");
+		//[Test]
+		//public async void ShouldGetDirectoryAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IDirectory directory = fileSystem.GetDirectory("Files");
 
-			// Act
-			IDirectory subDirectory = await directory.GetDirectoryAsync("Subfolder");
+		//	// Act
+		//	IDirectory subDirectory = await directory.GetDirectoryAsync("Subfolder");
 
-			// Assert
-			Assert.IsNotNull(subDirectory);
-			Assert.IsTrue(subDirectory.Exists);
-		}
+		//	// Assert
+		//	Assert.IsNotNull(subDirectory);
+		//	Assert.IsTrue(subDirectory.Exists);
+		//}
 
 		[Test]
 		public void ShouldGetDirectories()
@@ -177,19 +177,19 @@
 			Assert.AreEqual(1, directories.Count());
 		}
 
-		[Test]
-		public async void ShouldGetDirectoriesAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IDirectory directory = fileSystem.GetDirectory("Files");
+		//[Test]
+		//public async void ShouldGetDirectoriesAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IDirectory directory = fileSystem.GetDirectory("Files");
 
-			// Act
-			IEnumerable<IDirectory> directories = await directory.GetDirectoriesAsync();
+		//	// Act
+		//	IEnumerable<IDirectory> directories = await directory.GetDirectoriesAsync();
 
-			// Assert
-			Assert.AreEqual(1, directories.Count());
-		}
+		//	// Assert
+		//	Assert.AreEqual(1, directories.Count());
+		//}
 
 		[Test]
 		public void ShouldDeleteDirectory()
@@ -207,20 +207,20 @@
 			Assert.IsFalse(temp.Exists);
 		}
 
-		[Test]
-		public async void ShouldDeleteDirectoryAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IDirectory directory = fileSystem.GetDirectory("Files");
-			IDirectory temp = directory.CreateDirectory("Temp");
-			Assert.IsTrue(temp.Exists);
+		//[Test]
+		//public async void ShouldDeleteDirectoryAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IDirectory directory = fileSystem.GetDirectory("Files");
+		//	IDirectory temp = directory.CreateDirectory("Temp");
+		//	Assert.IsTrue(temp.Exists);
 
-			// Act
-			await temp.DeleteAsync();
+		//	// Act
+		//	await temp.DeleteAsync();
 
-			// Assert
-			Assert.IsFalse(temp.Exists);
-		}
+		//	// Assert
+		//	Assert.IsFalse(temp.Exists);
+		//}
 	}
 }

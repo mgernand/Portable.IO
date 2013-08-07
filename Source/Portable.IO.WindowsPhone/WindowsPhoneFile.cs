@@ -13,8 +13,6 @@
 		public WindowsPhoneFile(IsolatedStorageFile root, string path)
 		{
 			this.root = root;
-
-			path = System.IO.Path.GetFullPath(path);
 			this.Name = System.IO.Path.GetFileName(path);
 			this.Path = path;
 		}
@@ -42,7 +40,7 @@
 					throw new ArgumentOutOfRangeException("fileAccess");
 			}
 
-			IsolatedStorageFileStream stream = this.root.OpenFile(this.Path, FileMode.Open, nativeFileAccess, FileShare.Read);
+			IsolatedStorageFileStream stream = this.root.OpenFile(this.Path, FileMode.OpenOrCreate, nativeFileAccess, FileShare.Read);
 			return stream;
 		}
 

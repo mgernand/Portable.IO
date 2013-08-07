@@ -1,5 +1,6 @@
 ﻿namespace Portable.IO.Tests
 {
+	using System;
 	using NUnit.Framework;
 
 	public abstract class TestBase
@@ -10,17 +11,24 @@
 			IFileSystem fileSystem = FileSystem.Current;
 			IDirectory root = fileSystem.GetDirectory(".");
 			IDirectory files = root.CreateDirectory("Files");
-			files.CreateFile("file.txt");
+			IFile file1 = files.CreateFile("file.txt");
 			IDirectory subfolder = files.CreateDirectory("Subfolder");
-			subfolder.CreateFile("file.txt");
+			IFile file2 = subfolder.CreateFile("file.txt");
 		}
 
 		[TearDown]
 		public void TearDown()
 		{
-			IFileSystem fileSystem = FileSystem.Current;
-			IDirectory directory = fileSystem.GetDirectory("Files");
-			directory.Delete();
+			try
+			{
+				IFileSystem fileSystem = FileSystem.Current;
+				IDirectory directory = fileSystem.GetDirectory("Files");
+				directory.Delete();
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine(e);
+			}
 		}
 	}
 }

@@ -59,56 +59,56 @@
 			}
 		}
 
-		[Test]
-		public async void ShouldOpenFileReadAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IFile file = fileSystem.GetFile("Files/file.txt");
+		//[Test]
+		//public async void ShouldOpenFileReadAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IFile file = fileSystem.GetFile("Files/file.txt");
 
-			// Act
-			using (Stream stream = await file.OpenAsync(Portable.IO.FileAccess.Read))
-			{
-				// Assert
-				Assert.IsNotNull(stream);
-				Assert.IsTrue(stream.CanRead);
-				Assert.IsFalse(stream.CanWrite);
-			}
-		}
+		//	// Act
+		//	using (Stream stream = await file.OpenAsync(Portable.IO.FileAccess.Read))
+		//	{
+		//		// Assert
+		//		Assert.IsNotNull(stream);
+		//		Assert.IsTrue(stream.CanRead);
+		//		Assert.IsFalse(stream.CanWrite);
+		//	}
+		//}
 
-		[Test]
-		public async void ShouldOpenFileWriteAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IFile file = fileSystem.GetFile("Files/file.txt");
+		//[Test]
+		//public async void ShouldOpenFileWriteAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IFile file = fileSystem.GetFile("Files/file.txt");
 
-			// Act
-			using (Stream stream = await file.OpenAsync(Portable.IO.FileAccess.Write))
-			{
-				// Assert
-				Assert.IsNotNull(stream);
-				Assert.IsFalse(stream.CanRead);
-				Assert.IsTrue(stream.CanWrite);
-			}
-		}
+		//	// Act
+		//	using (Stream stream = await file.OpenAsync(Portable.IO.FileAccess.Write))
+		//	{
+		//		// Assert
+		//		Assert.IsNotNull(stream);
+		//		Assert.IsFalse(stream.CanRead);
+		//		Assert.IsTrue(stream.CanWrite);
+		//	}
+		//}
 
-		[Test]
-		public async void ShouldOpenFileReadWriteAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IFile file = fileSystem.GetFile("Files/file.txt");
+		//[Test]
+		//public async void ShouldOpenFileReadWriteAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IFile file = fileSystem.GetFile("Files/file.txt");
 
-			// Act
-			using (Stream stream = await file.OpenAsync(Portable.IO.FileAccess.ReadWrite))
-			{
-				// Assert
-				Assert.IsNotNull(stream);
-				Assert.IsTrue(stream.CanRead);
-				Assert.IsTrue(stream.CanWrite);
-			}
-		}
+		//	// Act
+		//	using (Stream stream = await file.OpenAsync(Portable.IO.FileAccess.ReadWrite))
+		//	{
+		//		// Assert
+		//		Assert.IsNotNull(stream);
+		//		Assert.IsTrue(stream.CanRead);
+		//		Assert.IsTrue(stream.CanWrite);
+		//	}
+		//}
 
 		[Test]
 		public void ShouldDeleteFile()
@@ -126,20 +126,20 @@
 			Assert.IsFalse(file.Exists);
 		}
 
-		[Test]
-		public async void ShouldDeleteFileAsync()
-		{
-			// Arrange
-			IFileSystem fileSystem = FileSystem.Current;
-			IFile file = fileSystem.GetFile("Files/demo.txt");
-			file.Open(Portable.IO.FileAccess.Write).Dispose();
-			Assert.IsTrue(file.Exists);
+		//[Test]
+		//public async void ShouldDeleteFileAsync()
+		//{
+		//	// Arrange
+		//	IFileSystem fileSystem = FileSystem.Current;
+		//	IFile file = fileSystem.GetFile("Files/demo.txt");
+		//	file.Open(Portable.IO.FileAccess.Write).Dispose();
+		//	Assert.IsTrue(file.Exists);
 
-			// Act
-			await file.DeleteAsync();
+		//	// Act
+		//	await file.DeleteAsync();
 
-			// Assert
-			Assert.IsFalse(file.Exists);
-		}
+		//	// Assert
+		//	Assert.IsFalse(file.Exists);
+		//}
 	}
 }
