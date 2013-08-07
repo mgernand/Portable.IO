@@ -7,8 +7,8 @@
     <ProjectGuid>{8E47B485-5486-4774-8505-163608A03018}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Portable.IO.Tests.Net</RootNamespace>
-    <AssemblyName>Portable.IO.Tests.Net</AssemblyName>
+    <RootNamespace>Portable.IO.Tests.Desktop</RootNamespace>
+    <AssemblyName>Portable.IO.Tests.Desktop</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -69,9 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Portable.IO.Net\Portable.IO.Net.csproj">
+    <ProjectReference Include="..\Portable.IO.Net\Portable.IO.Desktop.csproj">
       <Project>{77EA7083-22CF-4BE0-BFA4-C62AABD8DB68}</Project>
-      <Name>Portable.IO.Net</Name>
+      <Name>Portable.IO.Desktop</Name>
     </ProjectReference>
     <ProjectReference Include="..\Portable.IO\Portable.IO.csproj">
       <Project>{6C9E1ADE-29C6-4968-A078-A23571A48751}</Project>
@@ -84,7 +84,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="253d1884-5e29-4a72-8510-7b8f93353c5f" />
+      <UserProperties ProjectLinkReference="253d1884-5e29-4a72-8510-7b8f93353c5f" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
