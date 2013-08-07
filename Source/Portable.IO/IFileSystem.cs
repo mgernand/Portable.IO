@@ -26,6 +26,10 @@
 		/// <returns></returns>
 		Task<IFile> GetFileAsync(string path);
 
+		bool ExistsFile(string path);
+
+		Task<bool> ExistsFileAsync(string path);
+
 		/// <summary>
 		/// Gets the directory for the given path.
 		/// </summary>
@@ -39,5 +43,9 @@
 		/// <param name="path"></param>
 		/// <returns></returns>
 		Task<IDirectory> GetDirectoryAsync(string path);
+
+		bool ExistsDirectory(string path);
+
+		Task<bool> ExistsDirectoryAsync(string path);
 	}
 }

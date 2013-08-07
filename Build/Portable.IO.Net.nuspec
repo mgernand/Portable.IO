@@ -15,13 +15,13 @@
 		<tags></tags>
 		<dependencies>
 			<!-- Add nuget package dependencies -->
+			<package id="Portable.IO" />
 		</dependencies>
 		<frameworkAssemblies>
 		</frameworkAssemblies>
 	</metadata>
 	<files>
 		<!-- Add nuget package files -->
-		<file src="Portable.IO.dll" target="lib\net45\Portable.IO.dll" />
 		<file src="Portable.IO.Net.dll" target="lib\net45\Portable.IO.Net.dll" />
 	</files>
 </package>

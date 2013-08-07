@@ -15,15 +15,14 @@
 		<tags></tags>
 		<dependencies>
 			<!-- Add nuget package dependencies -->
+			<package id="Portable.IO" />
 		</dependencies>
 		<frameworkAssemblies>
 		</frameworkAssemblies>
 	</metadata>
 	<files>
 		<!-- Add nuget package files -->
-		<file src="Portable.IO.dll" target="lib\windowsphone8\Portable.IO.dll" />
 		<file src="Portable.IO.WindowsPhone.dll" target="lib\windowsphone8\Portable.IO.WindowsPhone.dll" />
-		<file src="Portable.IO.dll" target="lib\wp71\Portable.IO.dll" />
 		<file src="Portable.IO.WindowsPhone.dll" target="lib\wp71\Portable.IO.WindowsPhone.dll" />
 	</files>
 </package>
