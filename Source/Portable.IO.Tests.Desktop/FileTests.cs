@@ -1,14 +1,60 @@
 ﻿namespace Portable.IO.Tests
 {
 	using System.IO;
-	using System.Runtime;
-	using System.Threading.Tasks;
 	using FluentAssertions;
 	using NUnit.Framework;
 
 	[TestFixture]
 	public class FileTests : TestBase
 	{
+		[Test]
+		public void ShouldSupportSeekingOnReadOpenedFile()
+		{
+			// Arrange
+			IFileSystem fileSystem = FileSystem.Current;
+			IFile file = fileSystem.GetFile("Files/file.txt");
+
+			// Act
+			using (Stream stream = file.Open(Portable.IO.FileAccess.Read))
+			{
+				// Assert
+				stream.Should().NotBeNull();
+				stream.CanSeek.Should().BeTrue();
+			}
+		}
+
+		[Test]
+		public void ShouldSupportSeekingOnWriteOpenedFile()
+		{
+			// Arrange
+			IFileSystem fileSystem = FileSystem.Current;
+			IFile file = fileSystem.GetFile("Files/file.txt");
+
+			// Act
+			using (Stream stream = file.Open(Portable.IO.FileAccess.Write))
+			{
+				// Assert
+				stream.Should().NotBeNull();
+				stream.CanSeek.Should().BeTrue();
+			}
+		}
+
+		[Test]
+		public void ShouldSupportSeekingOnReadWriteOpenedFile()
+		{
+			// Arrange
+			IFileSystem fileSystem = FileSystem.Current;
+			IFile file = fileSystem.GetFile("Files/file.txt");
+
+			// Act
+			using (Stream stream = file.Open(Portable.IO.FileAccess.ReadWrite))
+			{
+				// Assert
+				stream.Should().NotBeNull();
+				stream.CanSeek.Should().BeTrue();
+			}
+		}
+
 		[Test]
 		public void ShouldOpenFileRead()
 		{
