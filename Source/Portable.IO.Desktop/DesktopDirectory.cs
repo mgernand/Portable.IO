@@ -1,11 +1,13 @@
 ﻿namespace Portable.IO
 {
 	using System.Collections.Generic;
+	using System.Diagnostics;
 	using System.Linq;
 
-	internal sealed class NetDirectory : DirectoryBase
+	[DebuggerDisplay("Name = {Name}")]
+	internal sealed class DesktopDirectory : DirectoryBase
 	{
-		public NetDirectory(string path)
+		public DesktopDirectory(string path)
 		{
 			path = System.IO.Path.GetFullPath(path);
 			this.Name = System.IO.Path.GetFileName(path);
@@ -21,36 +23,46 @@
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
 			System.IO.File.Create(newPath).Dispose();
-			return new NetFile(newPath);
+			return new DesktopFile(newPath);
 		}
 
 		public override IFile GetFile(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
-			return new NetFile(newPath);
+			return new DesktopFile(newPath);
 		}
 
 		public override IEnumerable<IFile> GetFiles()
 		{
-			return System.IO.Directory.GetFiles(this.Path).Select(x => new NetFile(x)).ToArray();
+			return System.IO.Directory.GetFiles(this.Path).Select(x => new DesktopFile(x)).ToArray();
+		}
+
+		public override IEnumerable<string> GetFileNames()
+		{
+			return System.IO.Directory.GetFiles(this.Path).Select(System.IO.Path.GetFileName).ToArray();
 		}
 
 		public override IDirectory CreateDirectory(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
 			System.IO.Directory.CreateDirectory(newPath);
-			return new NetDirectory(newPath);
+			return new DesktopDirectory(newPath);
 		}
 
 		public override IDirectory GetDirectory(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
-			return new NetDirectory(newPath);
+			return new DesktopDirectory(newPath);
 		}
 
 		public override IEnumerable<IDirectory> GetDirectories()
 		{
-			return System.IO.Directory.GetDirectories(Path).Select(x => new NetDirectory(x)).ToArray();
+			return System.IO.Directory.GetDirectories(Path).Select(x => new DesktopDirectory(x)).ToArray();
+		}
+
+		public override IEnumerable<string> GetDirectoryNames()
+		{
+			return System.IO.Directory.GetDirectories(this.Path).Select(System.IO.Path.GetFileName).ToArray();
 		}
 
 		public override void Delete()

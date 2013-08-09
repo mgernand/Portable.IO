@@ -60,9 +60,9 @@
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
-    <Compile Include="NetDirectory.cs" />
-    <Compile Include="NetFile.cs" />
-    <Compile Include="NetFileSystem.cs" />
+    <Compile Include="DesktopDirectory.cs" />
+    <Compile Include="DesktopFile.cs" />
+    <Compile Include="DektopFileSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

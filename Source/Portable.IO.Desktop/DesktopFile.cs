@@ -1,11 +1,13 @@
 ﻿namespace Portable.IO
 {
 	using System;
+	using System.Diagnostics;
 	using System.IO;
 
-	internal sealed class NetFile : FileBase
+	[DebuggerDisplay("Name = {Name}")]
+	internal sealed class DesktopFile : FileBase
 	{
-		public NetFile(string path)
+		public DesktopFile(string path)
 		{
 			path = System.IO.Path.GetFullPath(path);
 			this.Name = System.IO.Path.GetFileName(path);
@@ -42,6 +44,21 @@
 		public override void Delete()
 		{
 			System.IO.File.Delete(this.Path);
+		}
+
+		public override long Length
+		{
+			get
+			{
+				long length = 0;
+
+				if(this.Exists)
+				{
+					length = new FileInfo(this.Path).Length;
+				}
+
+				return length;
+			}
 		}
 	}
 }

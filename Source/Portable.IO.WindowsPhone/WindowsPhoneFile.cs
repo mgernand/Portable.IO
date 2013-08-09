@@ -48,5 +48,23 @@
 		{
 			this.root.DeleteFile(this.Path);
 		}
+
+		public override long Length
+		{
+			get
+			{
+				long length = 0;
+
+				if(this.Exists)
+				{
+					using(IsolatedStorageFileStream stream = this.root.OpenFile(this.Path, FileMode.Open, System.IO.FileAccess.Read))
+					{
+						length = stream.Length;
+					}
+				}
+
+				return length;
+			}
+		}
 	}
 }

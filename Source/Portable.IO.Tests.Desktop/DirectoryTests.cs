@@ -10,6 +10,32 @@
 	public class DirectoryTests : TestBase
 	{
 		[Test]
+		public void ShouldHaveCorrectFileCount()
+		{
+			// Arrange
+			IFileSystem fileSystem = FileSystem.Current;
+
+			// Act
+			IDirectory directory = fileSystem.GetDirectory("Files");
+
+			// Act
+			directory.FileCount.Should().Be(1);
+		}
+
+		[Test]
+		public void ShouldHaveCorrectDirectoryCount()
+		{
+			// Arrange
+			IFileSystem fileSystem = FileSystem.Current;
+
+			// Act
+			IDirectory directory = fileSystem.GetDirectory("Files");
+
+			// Act
+			directory.DirectoryCount.Should().Be(1);
+		}
+
+		[Test]
 		public void ShouldCreateFile()
 		{
 			// Arrange

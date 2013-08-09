@@ -18,5 +18,7 @@
 		{
 			await Task.Factory.StartNew(this.Delete);
 		}
+
+		public abstract long Length { get; }
 	}
 }

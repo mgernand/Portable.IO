@@ -12,5 +12,7 @@
 		void Delete();
 
 		Task DeleteAsync();
+
+		long Length { get; }
 	}
 }

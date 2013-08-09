@@ -10,7 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{AE492023-40B8-4D65-90C1-823CB59C2EB0}"
 	ProjectSection(SolutionItems) = preProject
 		..\Build\Build.proj = ..\Build\Build.proj
-		..\Build\Portable.IO.Net.nuspec = ..\Build\Portable.IO.Net.nuspec
+		..\Build\Portable.IO.Desktop.nuspec = ..\Build\Portable.IO.Desktop.nuspec
 		..\Build\Portable.IO.nuspec = ..\Build\Portable.IO.nuspec
 		..\Build\Portable.IO.WindowsPhone.nuspec = ..\Build\Portable.IO.WindowsPhone.nuspec
 	EndProjectSection

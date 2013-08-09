@@ -8,6 +8,19 @@
 	public class FileTests : TestBase
 	{
 		[Test]
+		public void ShouldHaveCorrectLength()
+		{
+			// Arrange
+			IFileSystem fileSystem = FileSystem.Current;
+			
+			// Act
+			IFile file = fileSystem.GetFile("Files/file.txt");
+
+			// Assert
+			file.Length.Should().Be(0);
+		}
+
+		[Test]
 		public void ShouldSupportSeekingOnReadOpenedFile()
 		{
 			// Arrange

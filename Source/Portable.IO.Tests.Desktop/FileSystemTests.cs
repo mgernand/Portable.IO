@@ -14,7 +14,7 @@
 
 			// Assert
 #if NET45
-			Assert.IsTrue(fileSystem is NetFileSystem);
+			Assert.IsTrue(fileSystem is DektopFileSystem);
 #elif WINDOWS_PHONE
 			Assert.IsTrue(fileSystem is WindowsPhoneFileSystem);
 #elif ANDROID

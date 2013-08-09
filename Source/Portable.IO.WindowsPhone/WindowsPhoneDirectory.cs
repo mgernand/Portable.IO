@@ -49,6 +49,11 @@
 			return files;
 		}
 
+		public override IEnumerable<string> GetFileNames()
+		{
+			return this.root.GetFileNames(System.IO.Path.Combine(this.Path, "*")).Select(System.IO.Path.GetFileName).ToArray();
+		}
+
 		public override IDirectory CreateDirectory(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
@@ -67,6 +72,11 @@
 			string[] directoryNames = this.root.GetDirectoryNames(System.IO.Path.Combine(this.Path, "*"));
 			WindowsPhoneDirectory[] directories = directoryNames.Select(x => new WindowsPhoneDirectory(this.root, System.IO.Path.Combine(this.Path, x))).ToArray();
 			return directories;
+		}
+
+		public override IEnumerable<string> GetDirectoryNames()
+		{
+			return this.root.GetDirectoryNames(System.IO.Path.Combine(this.Path, "*")).Select(System.IO.Path.GetFileName).ToArray();
 		}
 
 		public override void Delete()

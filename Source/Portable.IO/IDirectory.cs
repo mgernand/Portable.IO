@@ -17,6 +17,10 @@
 
 		Task<IEnumerable<IFile>> GetFilesAsync();
 
+		IEnumerable<string> GetFileNames();
+
+		Task<IEnumerable<string>> GetFileNamesAsync();
+			
 		IDirectory CreateDirectory(string name);
 
 		Task<IDirectory> CreateDirectoryAsync(string name);
@@ -29,8 +33,16 @@
 
 		Task<IEnumerable<IDirectory>> GetDirectoriesAsync();
 
+		IEnumerable<string> GetDirectoryNames();
+
+		Task<IEnumerable<string>> GetDirectoryNamesAsync();
+
 		void Delete();
 
 		Task DeleteAsync();
+
+		long FileCount { get; }
+
+		long DirectoryCount { get; }
 	}
 }

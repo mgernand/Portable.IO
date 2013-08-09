@@ -1,6 +1,7 @@
 ﻿namespace Portable.IO
 {
 	using System.Collections.Generic;
+	using System.Linq;
 	using System.Threading.Tasks;
 
 	internal abstract class DirectoryBase : FileSystemElementBase, IDirectory
@@ -26,6 +27,13 @@
 			return await Task.Factory.StartNew(() => this.GetFiles());
 		}
 
+		public abstract IEnumerable<string> GetFileNames();
+
+		public async Task<IEnumerable<string>> GetFileNamesAsync()
+		{
+			return await Task.Factory.StartNew(() => this.GetFileNames());
+		}
+
 		public abstract IDirectory CreateDirectory(string name);
 
 		public async Task<IDirectory> CreateDirectoryAsync(string name)
@@ -47,11 +55,28 @@
 			return await Task.Factory.StartNew(() => this.GetDirectories());
 		}
 
+		public abstract IEnumerable<string> GetDirectoryNames();
+
+		public async Task<IEnumerable<string>> GetDirectoryNamesAsync()
+		{
+			return await Task.Factory.StartNew(() => this.GetDirectoryNames());
+		}
+
 		public abstract void Delete();
 
 		public async Task DeleteAsync()
 		{
 			await Task.Factory.StartNew(this.Delete);
+		}
+
+		public long FileCount
+		{
+			get { return this.GetFileNames().LongCount(); }
+		}
+
+		public long DirectoryCount
+		{
+			get { return this.GetDirectoryNames().LongCount(); }
 		}
 	}
 }

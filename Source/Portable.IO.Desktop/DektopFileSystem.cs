@@ -1,15 +1,15 @@
 ﻿namespace Portable.IO
 {
-	internal sealed class NetFileSystem : FileSystemBase
+	internal sealed class DektopFileSystem : FileSystemBase
 	{
 		public override IFile GetFile(string path)
 		{
-			return new NetFile(path);
+			return new DesktopFile(path);
 		}
 
 		public override IDirectory GetDirectory(string path)
 		{
-			return new NetDirectory(path);
+			return new DesktopDirectory(path);
 		}
 	}
 }

@@ -28,7 +28,7 @@
 		private static IFileSystem CreateFileSystem()
 		{
 #if NET45
-			return new NetFileSystem();
+			return new DektopFileSystem();
 #elif WINDOWS_PHONE
 			return new WindowsPhoneFileSystem();
 #elif ANDROID
