@@ -1,7 +1,4 @@
-using System;
-using Portable.IO;
-
-namespace Portable.IO.Android
+namespace Portable.IO
 {
 	internal sealed class AndroidFileSystem : FileSystemBase
 	{

@@ -1,7 +1,6 @@
 namespace Portable.IO
 {
 	using System.Collections.Generic;
-	using System.IO;
 	using System.Linq;
 
 	internal sealed class AndroidDirectory : DirectoryBase
@@ -38,7 +37,7 @@ namespace Portable.IO
 
 		public override IEnumerable<string> GetFileNames()
 		{
-			throw new System.NotImplementedException();
+			return System.IO.Directory.GetFiles(this.Path).Select(System.IO.Path.GetFileName).ToArray();
 		}
 
 		public override IDirectory CreateDirectory(string name)

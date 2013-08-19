@@ -46,7 +46,17 @@ namespace Portable.IO
 
 		public override long Length
 		{
-			get { throw new NotImplementedException(); }
+			get
+			{
+				long length = 0;
+
+				if (this.Exists)
+				{
+					length = new FileInfo(this.Path).Length;
+				}
+
+				return length;
+			}
 		}
 	}
 }
