@@ -36,6 +36,11 @@ namespace Portable.IO
 			return System.IO.Directory.GetFiles(this.Path).Select(x => new AndroidFile(x)).ToArray();
 		}
 
+		public override IEnumerable<string> GetFileNames()
+		{
+			throw new System.NotImplementedException();
+		}
+
 		public override IDirectory CreateDirectory(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
@@ -52,6 +57,11 @@ namespace Portable.IO
 		public override IEnumerable<IDirectory> GetDirectories()
 		{
 			return System.IO.Directory.GetDirectories(Path).Select(x => new AndroidDirectory(x)).ToArray();
+		}
+
+		public override IEnumerable<string> GetDirectoryNames()
+		{
+			throw new System.NotImplementedException();
 		}
 
 		public override void Delete()

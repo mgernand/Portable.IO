@@ -43,5 +43,10 @@ namespace Portable.IO
 		{
 			System.IO.File.Delete(this.Path);
 		}
+
+		public override long Length
+		{
+			get { throw new NotImplementedException(); }
+		}
 	}
 }

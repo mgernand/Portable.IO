@@ -96,11 +96,5 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Portable.IO\Portable.IO.csproj">
-      <Project>{6c9e1ade-29c6-4968-a078-a23571a48751}</Project>
-      <Name>Portable.IO</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

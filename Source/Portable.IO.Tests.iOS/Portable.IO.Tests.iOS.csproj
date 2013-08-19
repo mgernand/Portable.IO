@@ -10,7 +10,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Portable.IO.Tests.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Portable.IO.Tests.iOS</AssemblyName>
+    <AssemblyName>PortableIOTestsiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,16 +84,6 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default@2x.png" />
     <BundleResource Include="Resources\Default-568h@2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Portable.IO.iOS\Portable.IO.iOS.csproj">
-      <Project>{69476c0b-9bd6-432b-a175-fe19d3254997}</Project>
-      <Name>Portable.IO.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Portable.IO\Portable.IO.csproj">
-      <Project>{6c9e1ade-29c6-4968-a078-a23571a48751}</Project>
-      <Name>Portable.IO</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
