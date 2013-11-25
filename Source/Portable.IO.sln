@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".items", ".items", "{4002443F-CFB9-41B2-BFF3-A3ED2BF5B0A3}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
@@ -17,11 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{AE492023
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{E6E33B59-304A-4B9E-A70E-B58817606FA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO", "Portable.IO\Portable.IO.csproj", "{6C9E1ADE-29C6-4968-A078-A23571A48751}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{6654EE00-CDBB-46F8-9F7E-97746A552806}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Tests.WindowsPhone", "Portable.IO.Tests.WindowsPhone\Portable.IO.Tests.WindowsPhone.csproj", "{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{19CAB9B4-B87D-452E-B0B5-A4E1BC17D88E}"
 	ProjectSection(SolutionItems) = preProject
@@ -37,6 +35,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".files", ".files", "{229994
 		FileNotFoundException.cs = FileNotFoundException.cs
 		FileSystem.cs = FileSystem.cs
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO", "Portable.IO\Portable.IO.csproj", "{6C9E1ADE-29C6-4968-A078-A23571A48751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.Tests.WindowsPhone", "Portable.IO.Tests.WindowsPhone\Portable.IO.Tests.WindowsPhone.csproj", "{88A99395-740C-4EAB-A0E6-F9ECE6D8EDB4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portable.IO.WindowsPhone", "Portable.IO.WindowsPhone\Portable.IO.WindowsPhone.csproj", "{1C70DBB2-1A2F-4739-A6E1-B5CAA49605F6}"
 EndProject
