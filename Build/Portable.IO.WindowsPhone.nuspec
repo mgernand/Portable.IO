@@ -22,6 +22,6 @@
 	</metadata>
 	<files>
 		<!-- Add nuget package files -->
-		<file src="Portable.IO.WindowsPhone.dll" target="lib\wp71\Portable.IO.WindowsPhone.dll" />
+		<file src="Portable.IO.WindowsPhone.dll" target="lib\wp80\Portable.IO.WindowsPhone.dll" />
 	</files>
 </package>
