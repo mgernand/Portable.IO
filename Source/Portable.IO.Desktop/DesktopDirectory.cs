@@ -37,11 +37,6 @@
 			return System.IO.Directory.GetFiles(this.Path).Select(x => new DesktopFile(x)).ToArray();
 		}
 
-		public override IEnumerable<string> GetFileNames()
-		{
-			return System.IO.Directory.GetFiles(this.Path).Select(System.IO.Path.GetFileName).ToArray();
-		}
-
 		public override IDirectory CreateDirectory(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
@@ -58,11 +53,6 @@
 		public override IEnumerable<IDirectory> GetDirectories()
 		{
 			return System.IO.Directory.GetDirectories(Path).Select(x => new DesktopDirectory(x)).ToArray();
-		}
-
-		public override IEnumerable<string> GetDirectoryNames()
-		{
-			return System.IO.Directory.GetDirectories(this.Path).Select(System.IO.Path.GetFileName).ToArray();
 		}
 
 		public override void Delete()

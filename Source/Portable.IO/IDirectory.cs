@@ -11,15 +11,13 @@
 
 		IFile GetFile(string name);
 
-		Task<IFile> GetFileAsync(string name);
-
 		IEnumerable<IFile> GetFiles();
 
-		Task<IEnumerable<IFile>> GetFilesAsync();
+		//Task<IEnumerable<IFile>> GetFilesAsync();
 
 		IEnumerable<string> GetFileNames();
 
-		Task<IEnumerable<string>> GetFileNamesAsync();
+		//Task<IEnumerable<string>> GetFileNamesAsync();
 			
 		IDirectory CreateDirectory(string name);
 
@@ -27,15 +25,29 @@
 
 		IDirectory GetDirectory(string name);
 
-		Task<IDirectory> GetDirectoryAsync(string name);
+		//Task<IDirectory> GetDirectoryAsync(string name);
 
 		IEnumerable<IDirectory> GetDirectories();
 
-		Task<IEnumerable<IDirectory>> GetDirectoriesAsync();
+		//Task<IEnumerable<IDirectory>> GetDirectoriesAsync();
 
 		IEnumerable<string> GetDirectoryNames();
 
-		Task<IEnumerable<string>> GetDirectoryNamesAsync();
+		//Task<IEnumerable<string>> GetDirectoryNamesAsync();
+
+		/// <summary>
+		/// Checks if the file specified by the given fileName exists in this directory.
+		/// </summary>
+		/// <param name="fileName"></param>
+		/// <returns></returns>
+		bool ExistsFile(string fileName);
+
+		/// <summary>
+		/// Checks if the directory specified by the given directoryName exists in this directory.
+		/// </summary>
+		/// <param name="directoryName"></param>
+		/// <returns></returns>
+		bool ExistsDirectory(string directoryName);
 
 		void Delete();
 

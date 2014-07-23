@@ -1,6 +1,5 @@
 ﻿namespace Portable.IO
 {
-	using System;
 	using System.Collections.Generic;
 	using System.Linq;
 
@@ -36,11 +35,6 @@
 			return System.IO.Directory.GetFiles(this.Path).Select(x => new IOSFile(x)).ToArray();
 		}
 
-		public override IEnumerable<string> GetFileNames()
-		{
-			return System.IO.Directory.GetFiles(this.Path).Select(System.IO.Path.GetFileName).ToArray();
-		}
-
 		public override IDirectory CreateDirectory(string name)
 		{
 			string newPath = System.IO.Path.Combine(this.Path, name);
@@ -57,11 +51,6 @@
 		public override IEnumerable<IDirectory> GetDirectories()
 		{
 			return System.IO.Directory.GetDirectories(Path).Select(x => new IOSDirectory(x)).ToArray();
-		}
-
-		public override IEnumerable<string> GetDirectoryNames()
-		{
-			throw new NotImplementedException();
 		}
 
 		public override void Delete()

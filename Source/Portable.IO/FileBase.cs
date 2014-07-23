@@ -7,9 +7,9 @@
 	{
 		public abstract Stream Open(FileAccess fileAccess);
 
-		public async Task<Stream> OpenAsync(FileAccess fileAccess)
+		public Task<Stream> OpenAsync(FileAccess fileAccess)
 		{
-			return await Task.Factory.StartNew(() => this.Open(fileAccess));
+			return Task.Factory.StartNew(() => this.Open(fileAccess));
 		}
 
 		public abstract void Delete();

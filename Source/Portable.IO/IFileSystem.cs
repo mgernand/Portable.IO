@@ -26,8 +26,18 @@
 		/// <returns></returns>
 		Task<IFile> GetFileAsync(string path);
 
+		/// <summary>
+		/// Checks if the file specified by the given path exists.
+		/// </summary>
+		/// <param name="path"></param>
+		/// <returns></returns>
 		bool ExistsFile(string path);
 
+		/// <summary>
+		/// Checks if the file specified by the given path exists.
+		/// </summary>
+		/// <param name="path"></param>
+		/// <returns></returns>
 		Task<bool> ExistsFileAsync(string path);
 
 		/// <summary>
@@ -44,8 +54,18 @@
 		/// <returns></returns>
 		Task<IDirectory> GetDirectoryAsync(string path);
 
+		/// <summary>
+		/// Checks if the directory specified by the given path exists.
+		/// </summary>
+		/// <param name="path"></param>
+		/// <returns></returns>
 		bool ExistsDirectory(string path);
 
+		/// <summary>
+		/// Checks if the directory specified by the given path exists.
+		/// </summary>
+		/// <param name="path"></param>
+		/// <returns></returns>
 		Task<bool> ExistsDirectoryAsync(string path);
 	}
 }

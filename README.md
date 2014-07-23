@@ -1,10 +1,13 @@
 Portable.IO
 ===========
 
-> __This project is still in a early development stage and is not intended to be used yet!__
-
 A simple abstraction for accessing files and folders on different platforms.
 
-----
+Supported platforms:
 
-The library is based on the Codeplex project [PCLStorage](https://pclstorage.codeplex.com/).
+* Full .NET 4.5		(Test suite exists, passes all tests.)
+* Xamarin Android	(Test suite missing.)
+* Xamarin iOS		(Test suite missing.)
+* Windows Phone 8	(Test suite missing.)
+
+The library is inspired by the project [PCLStorage](https://pclstorage.codeplex.com/).

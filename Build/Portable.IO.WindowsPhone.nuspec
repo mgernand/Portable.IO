@@ -12,7 +12,7 @@
 		<description>A portable api for filesystem io using a unified interface.</description>
 		<summary></summary>
 		<language>en-US</language>
-		<tags>io portable windowsphone file directory</tags>
+		<tags>io portable windows phone file directory</tags>
 		<dependencies>
 			<!-- Add nuget package dependencies -->
 			<dependency id="Portable.IO" />

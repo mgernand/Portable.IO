@@ -7,7 +7,7 @@
 	/// </summary>
 	public static class FileSystem
 	{
-		private static readonly IFileSystem CurrentFileSystem = FileSystem.CreateFileSystem();
+		private static readonly IFileSystem currentFileSystem = FileSystem.CreateFileSystem();
 
 		/// <summary>
 		/// Gets the current platform-specific implementation of <see cref="IFileSystem"/>.
@@ -16,12 +16,12 @@
 		{
 			get 
 			{
-				if (CurrentFileSystem == null) 
+				if (currentFileSystem == null) 
 				{
 					throw new NotImplementedException ("The platform-specific implementation of IFileSystem is missing.");
 				}
 
-				return CurrentFileSystem;
+				return currentFileSystem;
 			}
 		}
 

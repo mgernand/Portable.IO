@@ -8,65 +8,81 @@
 	{
 		public abstract IFile CreateFile(string name);
 
-		public async Task<IFile> CreateFileAsync(string name)
+		public Task<IFile> CreateFileAsync(string name)
 		{
-			return await Task.Factory.StartNew(() => this.CreateFile(name));
+			return Task.Factory.StartNew(() => this.CreateFile(name));
 		}
 
 		public abstract IFile GetFile(string name);
 
-		public async Task<IFile> GetFileAsync(string name)
-		{
-			return await Task.Factory.StartNew(() => this.GetFile(name));
-		}
+		//public Task<IFile> GetFileAsync(string name)
+		//{
+		//	return Task.Factory.StartNew(() => this.GetFile(name));
+		//}
 
 		public abstract IEnumerable<IFile> GetFiles();
 
-		public async Task<IEnumerable<IFile>> GetFilesAsync()
+		//public Task<IEnumerable<IFile>> GetFilesAsync()
+		//{
+		//	return Task.Factory.StartNew(() => this.GetFiles());
+		//}
+
+		public IEnumerable<string> GetFileNames()
 		{
-			return await Task.Factory.StartNew(() => this.GetFiles());
+			return this.GetFiles().Select(x => x.Name);
 		}
 
-		public abstract IEnumerable<string> GetFileNames();
-
-		public async Task<IEnumerable<string>> GetFileNamesAsync()
-		{
-			return await Task.Factory.StartNew(() => this.GetFileNames());
-		}
+		//public Task<IEnumerable<string>> GetFileNamesAsync()
+		//{
+		//	return Task.Factory.StartNew(() => this.GetFileNames());
+		//}
 
 		public abstract IDirectory CreateDirectory(string name);
 
-		public async Task<IDirectory> CreateDirectoryAsync(string name)
+		public Task<IDirectory> CreateDirectoryAsync(string name)
 		{
-			return await Task.Factory.StartNew(() => this.CreateDirectory(name));
+			return Task.Factory.StartNew(() => this.CreateDirectory(name));
 		}
 
 		public abstract IDirectory GetDirectory(string name);
 
-		public async Task<IDirectory> GetDirectoryAsync(string name)
-		{
-			return await Task.Factory.StartNew(() => this.GetDirectory(name));
-		}
+		//public Task<IDirectory> GetDirectoryAsync(string name)
+		//{
+		//	return Task.Factory.StartNew(() => this.GetDirectory(name));
+		//}
 
 		public abstract IEnumerable<IDirectory> GetDirectories();
 
-		public async Task<IEnumerable<IDirectory>> GetDirectoriesAsync()
+		//public Task<IEnumerable<IDirectory>> GetDirectoriesAsync()
+		//{
+		//	return Task.Factory.StartNew(() => this.GetDirectories());
+		//}
+
+		public IEnumerable<string> GetDirectoryNames()
 		{
-			return await Task.Factory.StartNew(() => this.GetDirectories());
+			return this.GetDirectories().Select(x => x.Name);
 		}
 
-		public abstract IEnumerable<string> GetDirectoryNames();
+		//public Task<IEnumerable<string>> GetDirectoryNamesAsync()
+		//{
+		//	return Task.Factory.StartNew(() => this.GetDirectoryNames());
+		//}
 
-		public async Task<IEnumerable<string>> GetDirectoryNamesAsync()
+		public bool ExistsFile(string fileName)
 		{
-			return await Task.Factory.StartNew(() => this.GetDirectoryNames());
+			return this.GetFileNames().Contains(fileName);
+		}
+
+		public bool ExistsDirectory(string directoryName)
+		{
+			return this.GetDirectoryNames().Contains(directoryName);
 		}
 
 		public abstract void Delete();
 
-		public async Task DeleteAsync()
+		public Task DeleteAsync()
 		{
-			await Task.Factory.StartNew(this.Delete);
+			return Task.Factory.StartNew(this.Delete);
 		}
 
 		public long FileCount
